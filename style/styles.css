@@ -1495,6 +1495,7 @@ body {
 .card-best .img-hover {
     opacity: 0;
     top: 0;
+    left: 0;
     position: absolute;
     transition: all 0.5s ease;
 }
@@ -1555,4 +1556,15 @@ body {
         left: 0;
     }
 
+}
+
+.cart-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background-color: var(--navy);
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
 }
