@@ -13,7 +13,7 @@
     <title>PAPSI Project</title>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="style/styles.css">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -40,300 +40,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-
-    <style>
-        :root {
-            --aqua: #4cc9f0;
-            --green: #58c490;
-            --soft-blue: #e0e7ff;
-            --soft-bg: #f3f5fb;
-            --teal: #30b2be;
-            --navy: #0a1121;
-
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-            background-color: var(--soft-bg);
-        }
-
-        .navbar {
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .navbar.scrolled {
-            background-color: var(--navy) !important;
-            backdrop-filter: blur(5px);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            border-radius: 0px 0px 25px 25px;
-        }
-
-
-        .btn-white {
-            background-color: white;
-            color: black;
-            transition: all 0.3s ease;
-        }
-
-        .btn-white:hover {
-            background-color: var(--aqua);
-            color: white;
-        }
-
-        .hero {
-            background: url(image/imgi_80_s10-background-scaled.jpg) no-repeat center center;
-            background-size: cover;
-            overflow: hidden;
-            height: 100vh;
-            width: 100%;
-            position: relative;
-            isolation: isolate;
-            color: white;
-        }
-
-        .hero::after {
-            content: "";
-            width: 100%;
-            height: 44px;
-            position: absolute;
-            bottom: -0.3%;
-            left: 0;
-            background-size: auto;
-            background-repeat: repeat no-repeat;
-            background-position: 26vw bottom;
-            background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 0C22.4434 -1 28.9842 2 55 24C94.1849 54 121.997 57 158.5 58C198.5 60 200 44 240 52C280 59 320 89 360 89C400 89 440 59 480 54C520 49 560 69 600 84C640 99 680 109 720 114C760 119 800 119 840 104C880 89 920 59 960 62C1000 64 1040 99 1080 94C1120 89 1127.5 59 1147.5 37C1171.48 11 1185.65 0 1200 0V134H1180C1160 134 1120 134 1080 134C1040 134 1000 134 960 134C920 134 880 134 840 134C800 134 760 134 720 134C680 134 640 134 600 134C560 134 520 134 480 134C440 134 400 134 360 134C320 134 280 134 240 134C200 134 160 134 120 134C80 134 40 134 20 134H0V0.0103865Z' fill='%23f3f5fb'/></svg>");
-        }
-
-
-        .btn-icon {
-            width: 45px;
-            height: 45px;
-            transition: all 0.3s ease;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .drink {
-            width: 700px;
-            height: auto;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            height: auto;
-            z-index: -1;
-        }
-
-        .lemon1 {
-            width: 200px;
-            height: auto;
-            position: absolute;
-            bottom: 40%;
-            left: 30%;
-            transform: translate(-50%);
-            height: auto;
-            z-index: -1;
-        }
-
-        .lemon2 {
-            width: 170px;
-            height: auto;
-            position: absolute;
-            top: 30%;
-            left: 75%;
-            transform: translate(-50%);
-            height: auto;
-            z-index: -1;
-        }
-
-        .leaf {
-            width: 170px;
-            height: auto;
-            position: absolute;
-            top: 20%;
-            left: 60%;
-            transform: translate(-50%);
-            height: auto;
-            z-index: -1;
-        }
-
-        .hero h1 {
-            font-size: 4.5rem;
-            line-height: 1.2;
-        }
-
-        .img-swipe {
-            width: 250px !important;
-            height: auto;
-            transition: all 0.3s ease;
-        }
-
-        .img-swipe:hover {
-            transform: translateY(-4%);
-            transition: all 0.3s ease;
-        }
-
-        .card {
-            background: var(--soft-bg);
-        }
-
-        .features {
-            position: relative;
-            isolation: isolate;
-            background-color: var(--green);
-            color: white !important;
-        }
-
-        .features::before {
-            content: "";
-            width: 100%;
-            height: 76px;
-            position: absolute;
-            top: -0.3%;
-            left: 0;
-            background-size: auto;
-            background-repeat: repeat no-repeat;
-            background-position: 14vw bottom;
-            background-image: url("data:image/svg+xml;utf8,    <svg viewBox='0 0 1200 134' xmlns='http://www.w3.org/2000/svg'><g transform='scale(1,-1) translate(0,-134)'><path d='M0 0C22.4434 -1 28.9842 2 55 24C94.1849 54 121.997 57 158.5 58C198.5 60 200 44 240 52C280 59 320 89 360 89C400 89 440 59 480 54C520 49 560 69 600 84C640 99 680 109 720 114C760 119 800 119 840 104C880 89 920 59 960 62C1000 64 1040 99 1080 94C1120 89 1127.5 59 1147.5 37C1171.48 11 1185.65 0 1200 0V134H1180C1160 134 1120 134 1080 134C1040 134 1000 134 960 134C920 134 880 134 840 134C800 134 760 134 720 134C680 134 640 134 600 134C560 134 520 134 480 134C440 134 400 134 360 134C320 134 280 134 240 134C200 134 160 134 120 134C80 134 40 134 20 134H0V0.0103865Z' fill='%23f3f5fb'/></g></svg>");
-        }
-
-        .features::after {
-            content: "";
-            width: 100%;
-            height: 99px;
-            position: absolute;
-            bottom: -0.3%;
-            left: 0;
-            background-size: auto;
-            background-repeat: repeat no-repeat;
-            background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 0C22.4434 -1 28.9842 2 55 24C94.1849 54 121.997 57 158.5 58C198.5 60 200 44 240 52C280 59 320 89 360 89C400 89 440 59 480 54C520 49 560 69 600 84C640 99 680 109 720 114C760 119 800 119 840 104C880 89 920 59 960 62C1000 64 1040 99 1080 94C1120 89 1127.5 59 1147.5 37C1171.48 11 1185.65 0 1200 0V134H1180C1160 134 1120 134 1080 134C1040 134 1000 134 960 134C920 134 880 134 840 134C800 134 760 134 720 134C680 134 640 134 600 134C560 134 520 134 480 134C440 134 400 134 360 134C320 134 280 134 240 134C200 134 160 134 120 134C80 134 40 134 20 134H0V0.0103865Z' fill='%23f3f5fb'/></svg>");
-
-        }
-
-        .shadow-color {
-            box-shadow: -1px 2.4rem 5px -20px rgba(18, 133, 28, 0.281), -2px 1.2rem 2px -8px rgba(18, 133, 28, 0.315);
-
-        }
-
-        .testimonial {
-            position: relative;
-            isolation: isolate;
-        }
-
-        .bg-testi1 {
-            position: absolute;
-            top: 20%;
-            left: 0%;
-            width: 400px;
-            height: auto;
-            z-index: -1;
-        }
-
-        .bg-testi2 {
-            position: absolute;
-            bottom: 20%;
-            right: 0%;
-            width: 400px;
-            height: auto;
-            z-index: -1;
-        }
-
-        .footer {
-            background-color: var(--teal);
-            color: white;
-            padding: 2rem 0;
-            position: relative;
-        }
-
-        .footer::before {
-            content: "";
-            width: 100%;
-            height: 76px;
-            position: absolute;
-            top: -0.3%;
-            left: 0;
-            background-size: auto;
-            background-repeat: repeat no-repeat;
-            background-position: 14vw bottom;
-            background-image: url("data:image/svg+xml;utf8,    <svg viewBox='0 0 1200 134' xmlns='http://www.w3.org/2000/svg'><g transform='scale(1,-1) translate(0,-134)'><path d='M0 0C22.4434 -1 28.9842 2 55 24C94.1849 54 121.997 57 158.5 58C198.5 60 200 44 240 52C280 59 320 89 360 89C400 89 440 59 480 54C520 49 560 69 600 84C640 99 680 109 720 114C760 119 800 119 840 104C880 89 920 59 960 62C1000 64 1040 99 1080 94C1120 89 1127.5 59 1147.5 37C1171.48 11 1185.65 0 1200 0V134H1180C1160 134 1120 134 1080 134C1040 134 1000 134 960 134C920 134 880 134 840 134C800 134 760 134 720 134C680 134 640 134 600 134C560 134 520 134 480 134C440 134 400 134 360 134C320 134 280 134 240 134C200 134 160 134 120 134C80 134 40 134 20 134H0V0.0103865Z' fill='%23f3f5fb'/></g></svg>");
-        }
-
-        .dropdown-hover .dropdown-menu {
-            display: block;
-            opacity: 0;
-            transform: translateY(10px);
-            pointer-events: none;
-            transition: opacity 0.25s ease, transform 0.25s ease;
-        }
-
-        .dropdown-hover:hover .dropdown-menu {
-            opacity: 1;
-            transform: translateY(0px);
-            pointer-events: auto;
-        }
-
-        .dropdown-hover .dropdown-menu.dropdown-menu-fullwidth {
-            width: 100%;
-            left: 0;
-        }
-
-        .checklist li {
-            position: relative;
-            margin-bottom: 8px;
-        }
-
-        .checklist li::before {
-            content: "\f26f";
-            display: inline-block;
-            font-family: bootstrap-icons !important;
-            font-style: normal;
-            font-weight: 400 !important;
-            font-variant: normal;
-            text-transform: none;
-            line-height: 1;
-            vertical-align: -.125em;
-            -webkit-font-smoothing: antialiased;
-            padding-inline-end: 25px;
-            color: var(--green);
-        }
-
-        .sosmed-list.scrolled {
-            display: none;
-        }
-
-        .logo-dew {
-            text-align: center;
-        }
-
-        .logo-dew.scrolled {
-            text-align: left;
-        }
-
-        .menu-list {
-            display: none;
-        }
-
-        .menu-list.scrolled {
-            display: block;
-        }
-
-        .menu-list2.scrolled {
-            display: none;
-        }
-    </style>
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg bg-none fixed-top py-3">
-        <div class="container-fluid mx-5 px-lg-5   ">
+        <div class="container-fluid mx-md-5 px-lg-5   ">
             <div id="navbar-pc" class="row w-100 d-lg-flex d-none justify-content-between align-items-center">
                 <div class="col-lg-4 sosmed-list">
 
@@ -416,8 +128,8 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Our Story</a></li>
-                                    <li><a class="dropdown-item" href="#">Our Ingredients</a></li>
-                                    <li><a class="dropdown-item" href="#">Sustainability</a></li>
+                                    <li><a class="dropdown-item" href="#">Contact</a></li>
+                                    <li><a class="dropdown-item" href="#"></a></li>
                                     <li><a class="dropdown-item" href="#">Contact</a></li>
                                 </ul>
                             </li>
@@ -497,9 +209,10 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Our Story</a></li>
-                                    <li><a class="dropdown-item" href="#">Our Ingredients</a></li>
-                                    <li><a class="dropdown-item" href="#">Sustainability</a></li>
                                     <li><a class="dropdown-item" href="#">Contact</a></li>
+                                    <li><a class="dropdown-item" href="#">Privacy Policy</a></li>
+                                    <li><a class="dropdown-item" href="#">Term of Service</a></li>
+                                    <li><a class="dropdown-item" href="#">FAQ</a></li>
                                 </ul>
                             </li>
 
@@ -606,7 +319,8 @@
                 <form role="search" class="d-flex">
                     <input class="form-control py-2 rounded-pill rounded-end-0" type="search" placeholder="Search"
                         aria-label="Search" />
-                        <button type="submit" class="btn btn-white rounded-pill rounded-start-0"><i class="bi bi-search"></i></button>
+                    <button type="submit" class="btn btn-white rounded-pill rounded-start-0"><i
+                            class="bi bi-search"></i></button>
 
                 </form>
             </div>
@@ -677,8 +391,8 @@
         </div>
     </div>
 
-    <section class="hero px-5">
-        <div class="container-fluid mx-5 h-100 ">
+    <section class="hero px-md-5 px-2">
+        <div class="container-fluid mx-lg-5 h-100 ">
             <div class="row w-100 justify-content-start h-100 align-items-center">
                 <div class="col-auto px-1 ">
                     <p class="fw-bold">Discover the Taste of Nusantara</p>
@@ -698,7 +412,7 @@
     </section>
 
     <section class="our-drinks">
-        <div class="container px-5 py-5 text-center">
+        <div class="container px-md-5 py-5 text-center">
             <small class="text-success">Our Special</small>
             <h2 class="fw-bold">Our Drinks Menu</h2>
 
@@ -743,57 +457,136 @@
         </div>
     </section>
 
-    <section class="features py-5 px-5">
+    <section class="features py-5 px-lg-5">
         <div class="container py-5">
-            <div class="row align-items-bottom">
+            <div class="row align-items-bottom py-5 my-5">
 
-                <div class="col-lg-3 px-5">
+                <div class="col-md-12 d-lg-none text-center mb-md-0 mb-5">
+                    <img src="image/imgi_24_juice-9-2.png" alt="" class="img-fluid">
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12">
                     <div class="row">
                         <div class="col-12">
-                            <i class="bi bi-truck fs-1 text-success"></i>
-                            <h4 class="fw-bold my-3">Sehat & Alami</h4>
-                            <p>Dibuat dari ekstrak rempah & buah Nusantara, tanpa pemanis buatan dan tanpa pengawet.</p>
+                            <div class="row">
+                                <div class="col-2 align-self-center features-icon">
+
+                                    <img src="image/imgi_21_healthcare.svg" class="img-fluid" width="75" alt="">
+                                </div>
+                                <div class="col-10">
+
+                                    <h5 class="fw-bold my-3">Sehat</h5>
+                                </div>
+                                <div class="col-12">
+
+                                    <p>Dibuat dari ekstrak rempah & buah Nusantara, tanpa pemanis buatan dan tanpa
+                                        pengawet.</p>
+                                </div>
+                            </div>
 
                         </div>
                         <div class="col-12">
-                            <i class="bi bi-truck fs-1 text-success"></i>
-                            <h4 class="fw-bold my-3">Botanical Authenticity</h4>
-                            <p>Rasakan keunikan rasa khas Indonesia dalam sensasi sparkling yang menyegarkan.</p>
+                            <div class="row">
+                                <div class="col-2 align-self-center features-icon">
+
+                                    <img src="image/imgi_22_apple.svg" class="img-fluid" width="75" alt="">
+                                </div>
+                                <div class="col-10">
+
+                                    <h5 class="fw-bold my-3">Botanical Authenticity</h5>
+                                </div>
+                                <div class="col-12">
+
+                                    <p>Rasakan keunikan rasa khas Indonesia dalam sensasi sparkling yang menyegarkan.
+                                    </p>
+                                </div>
+                            </div>
 
                         </div>
                         <div class="col-12">
-                            <i class="bi bi-truck fs-1 text-success"></i>
-                            <h4 class="fw-bold my-3">Low Calories</h4>
-                            <p>Ringan, rendah kalori, cocok untuk kamu yang ingin minuman segar tanpa rasa bersalah.</p>
+                            <div class="row">
+                                <div class="col-2 align-self-center features-icon">
+
+                                    <img src="image/imgi_23_wheat-flour.svg" class="img-fluid" width="75" alt="">
+                                </div>
+                                <div class="col-10">
+
+                                    <h5 class="fw-bold my-3">Low Calories</h5>
+                                </div>
+                                <div class="col-12">
+
+                                    <p>Ringan, rendah kalori, cocok untuk kamu yang ingin minuman segar tanpa rasa
+                                        bersalah.</p>
+                                </div>
+                            </div>
 
                         </div>
 
                     </div>
                 </div>
 
-                <div class="col-lg-6 px-5">
-                    <img src="image/imgi_24_juice-9-2.png" alt="" class="img-fluid mt-auto d-block">
+                <div class="col-lg-4 d-lg-block d-none text-center">
+                    <img src="image/imgi_24_juice-9-2.png" alt="" style="transform: scale(1.6);" class="img-fluid">
                 </div>
 
-                <div class="col-lg-3 px-5 text-end">
+                <div class="col-lg-4 col-md-6 col-12">
                     <div class="row">
                         <div class="col-12">
-                            <i class="bi bi-truck fs-1 text-success"></i>
-                            <h4 class="fw-bold my-3">Free Shipping</h4>
-                            <p>Enjoy free shipping on all orders over $50. Fast and reliable delivery to your doorstep.
-                            </p>
+                            <div class="row">
+                                <div class="col-2 align-self-center features-icon">
+
+                                    <img src="image/imgi_25_oranges.svg" class="img-fluid" width="75" alt="">
+                                </div>
+                                <div class="col-10">
+
+                                    <h5 class="fw-bold my-3">100% Alami</h5>
+                                </div>
+                                <div class="col-12">
+
+                                    <p>Dibuat dari ekstrak rempah & buah Nusantara, tanpa pemanis buatan dan tanpa
+                                        pengawet.
+                                    </p>
+                                </div>
+                            </div>
+
                         </div>
                         <div class="col-12">
-                            <i class="bi bi-truck fs-1 text-success"></i>
-                            <h4 class="fw-bold my-3">Free Shipping</h4>
-                            <p>Enjoy free shipping on all orders over $50. Fast and reliable delivery to your doorstep.
-                            </p>
+                            <div class="row">
+                                <div class="col-2 align-self-center features-icon">
+
+                                    <img src="image/imgi_26_protection.svg" class="img-fluid" width="75" alt="">
+                                </div>
+                                <div class="col-10">
+
+                                    <h5 class="fw-bold my-3">Terverifikasi</h5>
+                                </div>
+                                <div class="col-12">
+
+                                    <p>Kualiatas dan keamanan produk terjamin dengan sertifikasi dari BPOM dan halal
+                                        MUI.
+                                    </p>
+                                </div>
+                            </div>
+
                         </div>
                         <div class="col-12">
-                            <i class="bi bi-truck fs-1 text-success"></i>
-                            <h4 class="fw-bold my-3">Free Shipping</h4>
-                            <p>Enjoy free shipping on all orders over $50. Fast and reliable delivery to your doorstep.
-                            </p>
+                            <div class="row">
+                                <div class="col-2 align-self-center features-icon">
+
+                                    <img src="image/imgi_27_protecting.svg" class="img-fluid" width="75" alt="">
+                                </div>
+                                <div class="col-10">
+
+                                    <h5 class="fw-bold my-3">Ramah Lingkungan</h5>
+                                </div>
+                                <div class="col-12">
+
+                                    <p>Perkebunan organik dan kemasan ramah lingkungan untuk menjaga bumi kita tetap
+                                        hijau.
+                                    </p>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
@@ -805,36 +598,29 @@
 
     <section class="best-seller">
         <div class="container">
-            <div class="owl-carousel owl-best  owl-theme my-5 py-5">
+            <div class="owl-carousel owl-best owl-theme py-5">
                 <div class="item">
-                    <div class="card border-0">
-                        <img src="image/imgi_15_bn-drinks.png" class="img-swipe card-img-top mx-auto" alt="">
-                        <div class="card-body">
+                    <div class="card card-best border-0 my-5">
+                        <div class="bg-white">
+
+                            <img src="image/imgi_40_1-24-600x600.jpg" class="card-img-top img-before mx-auto" alt="">
+                            <img src="image/imgi_41_2-24-600x600.jpg" class="card-img-top img-hover mx-auto" alt="">
+                        </div>
+                        <div class="card-body bg-white">
+                            <div class="star-rating small mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
                             <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title.</p>
+                            <p class="card-tex text-success">Rp. 13.000</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="item">
-                    <div class="card border-0">
-                        <img src="image/imgi_16_bn-drinks2.png" class="img-swipe card-img-top mx-auto" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title.</p>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="item">
-                    <div class="card border-0">
-                        <img src="image/imgi_17_bn-drinks3-1.png" class="img-swipe card-img-top mx-auto" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -860,10 +646,10 @@
             <p class="text-center">Limited Time Offer</p>
             <h2 class="fw-bold text-center mb-5">Special Smoothies</h2>
             <div class="row">
-                <div class="col-6">
+                <div class="col-lg-6 col-12 ">
                     <img src="image/imgi_20_bn-drinks6.png" class="img-fluid" alt="">
                 </div>
-                <div class="col-6 align-self-center">
+                <div class="col-lg-6 col-12 mt-md-0 mt-5 align-self-center">
                     <h5>Nusa Dew – Special Edition</h5>
                     <h4 class="text-success">Rp. 13.000</h4>
                     <p>Nikmati kreasi botanical sparkling dengan bahan alami, segar, dan rendah kalori.
@@ -894,9 +680,9 @@
         <div class="container">
             <div class="card p-5 shadow-color">
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-9">
-                            <div class="owl-carousel owl-testimonial owl-theme my-5 py-5">
+                    <div class="row my-5">
+                        <div class="col-md-9 col-12">
+                            <div class="owl-carousel owl-testimonial owl-theme py-5">
                                 <div class="item">
                                     <div class="star-rating small mb-3">
                                         <i class="bi bi-star-fill text-warning"></i>
@@ -914,7 +700,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="border-start border-3 col-3 text-center align-self-center">
+                        <div class="col-md-3 col-12 text-center align-self-center total-review py-5">
                             <h1 class="text-success">5.0</h1>
                             <p>Based on 1,234 reviews</p>
                             <div class="star-rating small">
@@ -938,33 +724,33 @@
         <div class="container">
             <div class="row">
                 <div class="col-4">
-                    <div class="row">
-                        <div class="col-2">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-2 col-md-4 col-8 text-center">
                             <img class="img-fluid" src="image/imgi_45_policy-1.svg" alt="">
                         </div>
-                        <div class="col-10">
+                        <div class="col-lg-10 col-12 text-lg-start text-center">
                             <h5 class="fw-bold">Free Delivery</h5>
                             <p>Lorem ipsum dolor sit amet consectetur.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="row">
-                        <div class="col-2">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-2 col-md-4 col-8 text-center">
                             <img class="img-fluid" src="image/imgi_46_policy-2.svg" alt="">
                         </div>
-                        <div class="col-10">
+                        <div class="col-lg-10 col-12 text-lg-start text-center">
                             <h5 class="fw-bold">Free Delivery</h5>
                             <p>Lorem ipsum dolor sit amet consectetur.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="row">
-                        <div class="col-2">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-2 col-md-4 col-8 text-center">
                             <img class="img-fluid" src="image/imgi_47_policy-3.svg" alt="">
                         </div>
-                        <div class="col-10">
+                        <div class="col-lg-10 col-12 text-lg-start text-center">
                             <h5 class="fw-bold">Free Delivery</h5>
                             <p>Lorem ipsum dolor sit amet consectetur.</p>
                         </div>
@@ -977,16 +763,22 @@
     <section class="gallery py-5">
         <div class="container">
             <div class="row ">
-                <div class="col-3">
-                    <img src="image/imgi_51_gallerry22-1024x1024.jpg" class="img-fluid rounded" alt="">
-                </div>
-                <div class="col-6 text-center align-self-center">
+                <div class="col-12 d-md-none text-center align-self-center">
                     <h3 class="fw-bold">Gallery</h3>
                     <p>Follow us: @papsi_gallery</p>
                     <p>Share your style with us!</p>
                     <p>Be Great, Be Confident</p>
                 </div>
-                <div class="col-3">
+                <div class="col-md-3 col-6">
+                    <img src="image/imgi_51_gallerry22-1024x1024.jpg" class="img-fluid rounded" alt="">
+                </div>
+                <div class="col-6 d-md-block d-none text-center align-self-center">
+                    <h3 class="fw-bold">Gallery</h3>
+                    <p>Follow us: @papsi_gallery</p>
+                    <p>Share your style with us!</p>
+                    <p>Be Great, Be Confident</p>
+                </div>
+                <div class="col-md-3 col-6">
                     <img src="image/imgi_53_gallerry24-1024x1024.jpg" class="img-fluid rounded" alt="">
                 </div>
             </div>
@@ -1010,7 +802,7 @@
     <footer class="footer pt-5">
         <div class="container">
             <div class="row pt-5 justify-content-center">
-                <div class="col-6 text-center">
+                <div class="col-md-6 col-12 text-center">
                     <h2 class="fw-bold">Subscribe</h2>
                     <p class="small">Sign up for newsletter</p>
                     <form class="d-flex mt-5">
@@ -1022,19 +814,11 @@
                 </div>
             </div>
             <div class="row py-5 my-5">
-                <div class="col-3">
-                    <ul class="list-unstyled">
-                        <li class="fw-bold">Title</li>
-                        <li class="small">About Us</li>
-                        <li class="small">Contact</li>
-                        <li class="small">Blog</li>
-                    </ul>
-                </div>
-                <div class="col-6 text-center">
-                    <h1>Yue</h1>
+                <div class="col-12 d-md-none text-center mb-5">
+                    <h1>Nusa Dew</h1>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi accusantium quisquam fugiat non
                         culpa, ab deserunt.</p>
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-center mt-5">
                         <div class="col-auto px-1">
                             <a style="line-height: normal;" href="#"
                                 class="btn btn-white rounded-circle p-2  btn-icon text-center ">
@@ -1062,10 +846,52 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3 text-end">
+                <div class="col-md-3 col-6 text-md-start text-center">
                     <ul class="list-unstyled">
-                        <li class="fw-bold">Title</li>
-                        <li class="small">Privacy Policy</li>
+                        <li class="fw-bold">Testimonials</li>
+                        <li class="small">Customer Reviews</li>
+                        <li class="small">Video Testimonial</li>
+                        <li class="small">Influencers Stories</li>
+                        <li class="small">Before & After</li>
+                    </ul>
+                </div>
+                <div class="col-6 d-md-block d-none text-center">
+                    <h1>Nusa Dew</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi accusantium quisquam fugiat non
+                        culpa, ab deserunt.</p>
+                    <div class="row justify-content-center mt-5">
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="#"
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                        </div>
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="#"
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+                        </div>
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="#"
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
+                                <i class="bi bi-instagram"></i>
+
+                            </a>
+                        </div>
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="#"
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-md-end text-center">
+                    <ul class="list-unstyled">
+                        <li class="fw-bold">About Us</li>
+                        <li class="small">Our Story</li>
+                        <li class="small">Contact</li>
                         <li class="small">Terms of Service</li>
                         <li class="small">FAQ</li>
                     </ul>
@@ -1076,7 +902,7 @@
 
     </footer>
     <div class="copy">
-        <p class="text-center small mt-4">Copyright © 2024 Yue. All rights reserved.</p>
+        <p class="text-center small mt-4">Copyright © 2024 Nusa Dew. All rights reserved.</p>
     </div>
     <script>
         $(document).ready(function () {
