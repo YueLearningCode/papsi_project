@@ -2,35 +2,44 @@
 <html lang="en">
 
 <head>
+    <!-- Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico">
+
+    <!-- Favicon -->
+    <link rel="icon" href="image/logo.png" type="image/png">
+
+    <!-- Title -->
     <title>PAPSI Project</title>
 
-    <!-- style -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/styles.css">
 
-    <!-- scripts -->
-    <script src="js/script.js"></script>
-
-    <!-- bootstrap css -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
 
-    <!-- bootstrap icons -->
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
     <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="js/script.js"></script>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 
     <style>
         :root {
@@ -38,7 +47,8 @@
             --green: #58c490;
             --soft-blue: #e0e7ff;
             --soft-bg: #f3f5fb;
-            --navy: #2a3e59;
+            --teal: #30b2be;
+            --navy: #0a1121;
 
         }
 
@@ -52,6 +62,18 @@
             font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
             background-color: var(--soft-bg);
         }
+
+        .navbar {
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background-color: var(--navy) !important;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 0px 0px 25px 25px;
+        }
+
 
         .btn-white {
             background-color: white;
@@ -224,9 +246,10 @@
         }
 
         .footer {
-            background-color: var(--navy);
+            background-color: var(--teal);
             color: white;
             padding: 2rem 0;
+            position: relative;
         }
 
         .footer::before {
@@ -241,20 +264,78 @@
             background-position: 14vw bottom;
             background-image: url("data:image/svg+xml;utf8,    <svg viewBox='0 0 1200 134' xmlns='http://www.w3.org/2000/svg'><g transform='scale(1,-1) translate(0,-134)'><path d='M0 0C22.4434 -1 28.9842 2 55 24C94.1849 54 121.997 57 158.5 58C198.5 60 200 44 240 52C280 59 320 89 360 89C400 89 440 59 480 54C520 49 560 69 600 84C640 99 680 109 720 114C760 119 800 119 840 104C880 89 920 59 960 62C1000 64 1040 99 1080 94C1120 89 1127.5 59 1147.5 37C1171.48 11 1185.65 0 1200 0V134H1180C1160 134 1120 134 1080 134C1040 134 1000 134 960 134C920 134 880 134 840 134C800 134 760 134 720 134C680 134 640 134 600 134C560 134 520 134 480 134C440 134 400 134 360 134C320 134 280 134 240 134C200 134 160 134 120 134C80 134 40 134 20 134H0V0.0103865Z' fill='%23f3f5fb'/></g></svg>");
         }
+
+        .dropdown-hover .dropdown-menu {
+            display: block;
+            opacity: 0;
+            transform: translateY(10px);
+            pointer-events: none;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+
+        .dropdown-hover:hover .dropdown-menu {
+            opacity: 1;
+            transform: translateY(0px);
+            pointer-events: auto;
+        }
+
+        .dropdown-hover .dropdown-menu.dropdown-menu-fullwidth {
+            width: 100%;
+            left: 0;
+        }
+
+        .checklist li {
+            position: relative;
+            margin-bottom: 8px;
+        }
+
+        .checklist li::before {
+            content: "\f26f";
+            display: inline-block;
+            font-family: bootstrap-icons !important;
+            font-style: normal;
+            font-weight: 400 !important;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            vertical-align: -.125em;
+            -webkit-font-smoothing: antialiased;
+            padding-inline-end: 25px;
+            color: var(--green);
+        }
+
+        .sosmed-list.scrolled {
+            display: none;
+        }
+
+        .logo-dew {
+            text-align: center;
+        }
+
+        .logo-dew.scrolled {
+            text-align: left;
+        }
+
+        .menu-list {
+            display: none;
+        }
+
+        .menu-list.scrolled {
+            display: block;
+        }
+
+        .menu-list2.scrolled {
+            display: none;
+        }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-none fixed-top py-3">
-        <div class="container-fluid mx-5 px-5   ">
-            <div class="row w-100 ">
-                <div class="col-lg-4">
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+    <nav class="navbar navbar-expand-lg bg-none fixed-top py-3">
+        <div class="container-fluid mx-5 px-lg-5   ">
+            <div id="navbar-pc" class="row w-100 d-lg-flex d-none justify-content-between align-items-center">
+                <div class="col-lg-4 sosmed-list">
 
                     <div class="row">
                         <div class="col-auto px-1">
@@ -279,17 +360,72 @@
                         <div class="col-auto px-1">
                             <a style="line-height: normal;" href="#"
                                 class="btn btn-white rounded-circle p-2  btn-icon text-center ">
-                                <i class="bi bi-linkedin"></i>
+                                <i class="bi bi-youtube "></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 text-center">
+                <div class="col-lg-4 logo-dew">
                     <a class="navbar-brand me-0 text-white" href="#">
-                        <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24"
+                        <img src="image/logo.png" alt="Logo" width="75" height="75"
                             class="d-inline-block align-text-top ">
-                        Yue
                     </a>
+                </div>
+                <div class="col-4 menu-list">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+
+                            <!-- HOME -->
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">
+                                    Home
+                                </a>
+                            </li>
+
+                            <!-- SHOP -->
+                            <li class="nav-item dropdown-hover">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button">
+                                    Shop
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">All Drinks</a></li>
+                                    <li><a class="dropdown-item" href="#">Best Sellers</a></li>
+                                    <li><a class="dropdown-item" href="#">Seasonal Specials</a></li>
+                                    <li><a class="dropdown-item" href="#">Fresh Juice Series</a></li>
+                                    <li><a class="dropdown-item" href="#">Gift Packages</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- TESTIMONIAL -->
+                            <li class="nav-item dropdown-hover">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button">
+                                    Testimonial
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-fullwidth">
+                                    <li><a class="dropdown-item" href="#">Customer Reviews</a></li>
+                                    <li><a class="dropdown-item" href="#">Video Testimonials</a></li>
+                                    <li><a class="dropdown-item" href="#">Influencer Stories</a></li>
+                                    <li><a class="dropdown-item" href="#">Before & After</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- ABOUT US -->
+                            <li class="nav-item dropdown-hover">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button">
+                                    About Us
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Our Story</a></li>
+                                    <li><a class="dropdown-item" href="#">Our Ingredients</a></li>
+                                    <li><a class="dropdown-item" href="#">Sustainability</a></li>
+                                    <li><a class="dropdown-item" href="#">Contact</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+
+
+                    </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="row justify-content-end">
@@ -316,73 +452,241 @@
                     </div>
 
                 </div>
-                <div class="col-12">
+                <div class="col-12 menu-list2">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+
+                            <!-- HOME -->
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="#">
                                     Home
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
+
+                            <!-- SHOP -->
+                            <li class="nav-item dropdown-hover">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button">
+                                    Shop
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item" href="#">All Drinks</a></li>
+                                    <li><a class="dropdown-item" href="#">Best Sellers</a></li>
+                                    <li><a class="dropdown-item" href="#">Seasonal Specials</a></li>
+                                    <li><a class="dropdown-item" href="#">Fresh Juice Series</a></li>
+                                    <li><a class="dropdown-item" href="#">Gift Packages</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
+
+                            <!-- TESTIMONIAL -->
+                            <li class="nav-item dropdown-hover">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button">
+                                    Testimonial
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-fullwidth">
+                                    <li><a class="dropdown-item" href="#">Customer Reviews</a></li>
+                                    <li><a class="dropdown-item" href="#">Video Testimonials</a></li>
+                                    <li><a class="dropdown-item" href="#">Influencer Stories</a></li>
+                                    <li><a class="dropdown-item" href="#">Before & After</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- ABOUT US -->
+                            <li class="nav-item dropdown-hover">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button">
+                                    About Us
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item" href="#">Our Story</a></li>
+                                    <li><a class="dropdown-item" href="#">Our Ingredients</a></li>
+                                    <li><a class="dropdown-item" href="#">Sustainability</a></li>
+                                    <li><a class="dropdown-item" href="#">Contact</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
+
                         </ul>
+
 
                     </div>
                 </div>
             </div>
 
+            <div id="navbar-tablet"
+                class="row w-100 d-lg-none d-md-flex d-none align-items-center justify-content-between">
+                <div class="col-md-auto">
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#sidebar" aria-controls="sidebar">
+                                <span class="bi bi-list text-white"></span>
+                            </button>
+                        </div>
 
+                        <div class="col-auto">
+                            <a class="navbar-brand me-0 text-white" href="#">
+                                <img src="image/logo.png" alt="Logo" width="75" height="75"
+                                    class="d-inline-block align-text-top ">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-auto ">
+                    <div class="row justify-content-end">
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="#"
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
+                                <i class="bi bi-person"></i>
+                            </a>
+                        </div>
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="#"
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
+                                <i class="bi bi-heart-fill"></i>
+                            </a>
+                        </div>
+                        <div class="col-auto px-1">
+                            <form role="search">
+                                <input class="form-control rounded-pill py-2  me-2" type="search" placeholder="Search"
+                                    aria-label="Search" />
+
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="navbar-mobile" class="row w-100 d-lg-none d-md-none align-items-center justify-content-between">
+                <div class="col-auto">
+                    <div class="row align-items-center g-0">
+                        <div class="col-auto">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#sidebar" aria-controls="sidebar">
+                                <span class="bi bi-list text-white"></span>
+                            </button>
+                        </div>
+
+                        <div class="col-auto">
+                            <a style="line-height: normal;" href="#" data-bs-target="#searchModal"
+                                data-bs-toggle="modal" class="p-2 text-center text-white">
+                                <i class="bi bi-search"></i>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="col-auto me-2">
+                    <a class="navbar-brand me-0 text-white" href="#">
+                        <img src="image/logo.png" alt="Logo" width="50" height="50"
+                            class="d-inline-block align-text-top ">
+                    </a>
+                </div>
+                <div class="col-auto ">
+                    <div class="row justify-content-end">
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="#" class="p-2 text-center text-white">
+                                <i class="bi bi-cart"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
         </div>
     </nav>
+
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-pill">
+                <form role="search" class="d-flex">
+                    <input class="form-control py-2 rounded-pill rounded-end-0" type="search" placeholder="Search"
+                        aria-label="Search" />
+                        <button type="submit" class="btn btn-white rounded-pill rounded-start-0"><i class="bi bi-search"></i></button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="sidebar"
+        aria-labelledby="sidebarLabel">
+        <div class="offcanvas-header">
+            <img src="image/logo.png" class="img-fluid" width="75" alt="">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-unstyled">
+                <li class="py-3"><a class="fw-bold text-success text-decoration-none" href="#">Home</a></li>
+                <li class="py-3"> <a class="fw-bold text-success text-decoration-none" data-bs-toggle="collapse"
+                        href="#shopCollapse" role="button" aria-expanded="false" aria-controls="shopCollapse">
+                        Shop
+                    </a>
+                    <div class="collapse" id="shopCollapse">
+                        <ul class="list-unstyled ps-3">
+                            <li class="py-2"><a class="text-success text-decoration-none" href="#">All Drinks</a></li>
+                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Best Sellers</a></li>
+                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Seasonal Specials</a>
+                            </li>
+                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Fresh Juice
+                                    Series</a></li>
+                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Gift Packages</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="py-3"> <a class="fw-bold text-success text-decoration-none" data-bs-toggle="collapse"
+                        href="#testimonialCollapse" role="button" aria-expanded="false"
+                        aria-controls="testimonialCollapse">
+                        Testimonial
+                    </a>
+                    <div class="collapse" id="testimonialCollapse">
+                        <ul class="list-unstyled ps-3">
+                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Customer Reviews</a>
+                            </li>
+                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Video
+                                    Testimonials</a></li>
+                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Influencer
+                                    Stories</a></li>
+                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Before & After</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="py-3"> <a class="fw-bold text-success text-decoration-none" data-bs-toggle="collapse"
+                        href="#aboutUsCollapse" role="button" aria-expanded="false" aria-controls="aboutUsCollapse">
+                        About Us
+                    </a>
+                    <div class="collapse" id="aboutUsCollapse">
+                        <ul class="list-unstyled ps-3">
+                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Our Story</a></li>
+                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Our Ingredients</a>
+                            </li>
+                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Sustainability</a>
+                            </li>
+                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
 
     <section class="hero px-5">
         <div class="container-fluid mx-5 h-100 ">
             <div class="row w-100 justify-content-start h-100 align-items-center">
                 <div class="col-auto px-1 ">
-                    <p class="fw-bold">What's New?</p>
-                    <h1 class="fw-bold">Smooties<br>Blackberry</h1>
-                    <a href="#" class="btn btn-white my-5 rounded-pill fw-bold">Order Now</a>
+                    <p class="fw-bold">Discover the Taste of Nusantara</p>
+                    <h1 class="fw-bold">Nusa Dew<br>Sparkling Botanicals</h1>
+                    <p class="mt-3">Air soda alami dengan sentuhan rempah & buah-buahan khas Indonesia, segar dan sehat.
+                    </p>
+                    <a href="#" class="btn btn-white my-4 rounded-pill fw-bold">Order Now</a>
+
                 </div>
             </div>
         </div>
@@ -403,8 +707,10 @@
                     <div class="card border-0">
                         <img src="image/imgi_15_bn-drinks.png" class="img-swipe card-img-top mx-auto" alt="">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title.</p>
+                            <h5 class="card-title">Jamu Twist</h5>
+                            <p class="card-text">Perpaduan kunyit, asam jawa, dan jahe dalam sensasi sparkling yang
+                                segar dan menyehatkan.</p>
+
                         </div>
                     </div>
                 </div>
@@ -413,8 +719,10 @@
                     <div class="card border-0">
                         <img src="image/imgi_16_bn-drinks2.png" class="img-swipe card-img-top mx-auto" alt="">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title.</p>
+                            <h5 class="card-title">Kopi Blossom</h5>
+                            <p class="card-text">Eksplorasi rasa bunga kopi, cengkeh, dan jeruk nipis dalam minuman
+                                berkarbonasi ringan.</p>
+
                         </div>
                     </div>
                 </div>
@@ -423,8 +731,10 @@
                     <div class="card border-0">
                         <img src="image/imgi_17_bn-drinks3-1.png" class="img-swipe card-img-top mx-auto" alt="">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title.</p>
+                            <h5 class="card-title">Lidah Buaya Lychee</h5>
+                            <p class="card-text">Segarnya lidah buaya berpadu dengan manis alami leci dalam soda
+                                botanical khas Nusantara.</p>
+
                         </div>
                     </div>
                 </div>
@@ -441,21 +751,21 @@
                     <div class="row">
                         <div class="col-12">
                             <i class="bi bi-truck fs-1 text-success"></i>
-                            <h4 class="fw-bold my-3">Free Shipping</h4>
-                            <p>Enjoy free shipping on all orders over $50. Fast and reliable delivery to your doorstep.
-                            </p>
+                            <h4 class="fw-bold my-3">Sehat & Alami</h4>
+                            <p>Dibuat dari ekstrak rempah & buah Nusantara, tanpa pemanis buatan dan tanpa pengawet.</p>
+
                         </div>
                         <div class="col-12">
                             <i class="bi bi-truck fs-1 text-success"></i>
-                            <h4 class="fw-bold my-3">Free Shipping</h4>
-                            <p>Enjoy free shipping on all orders over $50. Fast and reliable delivery to your doorstep.
-                            </p>
+                            <h4 class="fw-bold my-3">Botanical Authenticity</h4>
+                            <p>Rasakan keunikan rasa khas Indonesia dalam sensasi sparkling yang menyegarkan.</p>
+
                         </div>
                         <div class="col-12">
                             <i class="bi bi-truck fs-1 text-success"></i>
-                            <h4 class="fw-bold my-3">Free Shipping</h4>
-                            <p>Enjoy free shipping on all orders over $50. Fast and reliable delivery to your doorstep.
-                            </p>
+                            <h4 class="fw-bold my-3">Low Calories</h4>
+                            <p>Ringan, rendah kalori, cocok untuk kamu yang ingin minuman segar tanpa rasa bersalah.</p>
+
                         </div>
 
                     </div>
@@ -554,19 +864,17 @@
                     <img src="image/imgi_20_bn-drinks6.png" class="img-fluid" alt="">
                 </div>
                 <div class="col-6 align-self-center">
-                    <h5>Smoothies</h5>
-                    <h4 class="text-success">Rp. 13.0000</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente debitis, sequi voluptate, quas
-                        accusamus, adipisci corrupti magnam quisquam iste saepe reiciendis esse sit sint et asperiores
-                        deleniti excepturi provident praesentium. Quas porro hic asperiores suscipit libero explicabo
-                        molestias incidunt quae, atque aperiam, possimus, enim reiciendis officiis fugiat ipsam autem
-                        voluptatibus?</p>
-                    <ul class="list-unstyled">
-                        <li>Fresh Ingredients</li>
-                        <li>100% Natural</li>
-                        <li>No Added Sugar</li>
-                        <li>Rich in Vitamins</li>
+                    <h5>Nusa Dew – Special Edition</h5>
+                    <h4 class="text-success">Rp. 13.000</h4>
+                    <p>Nikmati kreasi botanical sparkling dengan bahan alami, segar, dan rendah kalori.
+                        Sempurna untuk hari yang aktif dan penuh energi.</p>
+                    <ul class="list-unstyled checklist">
+                        <li>100% Botanical Extract</li>
+                        <li>No Preservatives</li>
+                        <li>No Artificial Sweeteners</li>
+                        <li>Authentic Nusantara Flavor</li>
                     </ul>
+
                     <div class="row">
                         <div class="col-auto">
 
@@ -597,11 +905,12 @@
                                         <i class="bi bi-star-fill text-warning"></i>
                                         <i class="bi bi-star-fill text-warning"></i>
                                     </div>
-                                    <p class="card-text">"This is the best smoothie I've ever had! The flavors are so
-                                        fresh
-                                        and
-                                        delicious."</p>
-                                    <h5 class="card-title">- Sarah L.</h5>
+                                    <p class="card-text">
+                                        "Rasanya beda dari soda biasa—lebih alami, wangi rempahnya lembut, dan segarnya
+                                        tahan lama!"
+                                    </p>
+                                    <h5 class="card-title">- Aurel P.</h5>
+
                                 </div>
                             </div>
                         </div>
@@ -707,7 +1016,7 @@
                     <form class="d-flex mt-5">
                         <input class="form-control rounded-pill rounded-end-0 py-2" type="search"
                             placeholder="Your email" aria-label="Search" />
-                        <button class="btn btn-success rounded-pill px-4 py-2 fw-bold rounded-start-0"
+                        <button class="btn btn-white rounded-pill px-4 py-2 fw-bold rounded-start-0"
                             type="submit">Subscribe</button>
                     </form>
                 </div>
@@ -716,9 +1025,9 @@
                 <div class="col-3">
                     <ul class="list-unstyled">
                         <li class="fw-bold">Title</li>
-                        <li>About Us</li>
-                        <li>Contact</li>
-                        <li>Blog</li>
+                        <li class="small">About Us</li>
+                        <li class="small">Contact</li>
+                        <li class="small">Blog</li>
                     </ul>
                 </div>
                 <div class="col-6 text-center">
@@ -756,9 +1065,9 @@
                 <div class="col-3 text-end">
                     <ul class="list-unstyled">
                         <li class="fw-bold">Title</li>
-                        <li>Privacy Policy</li>
-                        <li>Terms of Service</li>
-                        <li>FAQ</li>
+                        <li class="small">Privacy Policy</li>
+                        <li class="small">Terms of Service</li>
+                        <li class="small">FAQ</li>
                     </ul>
                 </div>
             </div>
@@ -766,13 +1075,16 @@
         </div>
 
     </footer>
-    <div class="copy bg-white">
+    <div class="copy">
         <p class="text-center small mt-4">Copyright © 2024 Yue. All rights reserved.</p>
     </div>
     <script>
         $(document).ready(function () {
             $(".owl-menu").owlCarousel({
                 loop: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
                 margin: 40,
                 nav: true,
                 dots: false,
@@ -786,6 +1098,9 @@
 
             $(".owl-best").owlCarousel({
                 loop: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
                 margin: 40,
                 nav: true,
                 dots: false,
@@ -798,6 +1113,9 @@
             });
             $(".owl-testimonial").owlCarousel({
                 loop: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
                 margin: 40,
                 nav: true,
                 dots: false,
