@@ -64,3 +64,52 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+$(document).ready(function () {
+    $(".owl-menu").owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        margin: 40,
+        nav: true,
+        dots: false,
+        responsive: {
+            0: { items: 1 },
+            576: { items: 2 },
+            992: { items: 3 }
+        },
+        slideBy: 1
+    });
+
+    $(".owl-best").owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        margin: 40,
+        nav: true,
+        dots: false,
+        responsive: {
+            0: { items: 1 },
+            576: { items: 2 },
+            992: { items: 4 }
+        },
+        slideBy: 1
+    });
+    $(".owl-testimonial").owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        margin: 40,
+        nav: true,
+        dots: false,
+        responsive: {
+            0: { items: 1 },
+            576: { items: 1 },
+            992: { items: 1 }
+        },
+        slideBy: 1
+    });
+});
+
