@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="image/logo.png" type="image/png">
+
+    <title>Detail Produk | Nusa Dew</title>
+
+    <link rel="stylesheet" href="style/styles.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --green: #2c5f2d; /* Menggunakan warna hijau dari identitas Nusa Dew */
+            --soft-bg: #f8f9fa; /* Warna latar belakang ringan */
+        }
+        .page-header {
+            padding-top: 150px;
+            padding-bottom: 50px;
+            background-color: var(--soft-bg);
+        }
+
+        .product-gallery-thumbnail {
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: border-color 0.3s ease;
+            width: 100px; /* Ukuran thumbnail */
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .product-gallery-thumbnail.active {
+            border-color: var(--green); /* Warna border aktif */
+        }
+        
+        /* Mengubah warna teks tab yang aktif menjadi warna brand */
+        .nav-link.active.text-success.fw-bold {
+            color: var(--green) !important;
+            border-color: var(--green) !important;
+        }
+
+        /* Styling untuk review */
+        .review-card {
+            border-left: 3px solid var(--green);
+            padding-left: 15px;
+            margin-bottom: 20px;
+            background-color: #fcfcfc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-none fixed-top py-3">
+        <div class="container-fluid mx-md-5 px-lg-5   ">
+            <div id="navbar-pc" class="row w-100 d-lg-flex d-none justify-content-between align-items-center">
+                <div class="col-lg-4 sosmed-list">
+                    <div class="row">
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="#"
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                        </div>
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="#"
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+                        </div>
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="#"
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="#"
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
+                                <i class="bi bi-youtube "></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 logo-dew">
+                    <a class="navbar-brand me-0 text-white" href="#">
+                        <img src="image/logo.png" alt="Logo" width="75" height="75"
+                            class="d-inline-block align-text-top ">
+                    </a>
+                </div>
+                <div class="col-4 menu-list">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="shop.html">Shop</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="testimonial.html">Testimonial</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="about.html">About Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row justify-content-end">
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="cart.html"
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
+                                <i class="bi bi-cart"></i>
+                            </a>
+                        </div>
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="#"
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
+                                <i class="bi bi-heart-fill"></i>
+                            </a>
+                        </div>
+                        <div class="col-auto px-1">
+                            <form role="search">
+                                <input class="form-control rounded-pill py-2  me-2" type="search" placeholder="Search"
+                                    aria-label="Search" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 menu-list2">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="shop.html">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="testimonial.html">Testimonial</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="navbar-tablet"
+                class="row w-100 d-lg-none d-md-flex d-none align-items-center justify-content-between">
+                </div>
+
+            <div id="navbar-mobile" class="row w-100 d-lg-none d-md-none align-items-center justify-content-between">
+                </div>
+        </div>
+    </nav>
+    <section class="page-header">
+        <div class="container">
+            <p class="text-muted small">HOME / SHOP / <span class="text-success">SUNSET CITRUS</span></p>
+        </div>
+    </section>
+
+    <section class="product-detail py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <img src="1litersunset.png" class="img-fluid rounded" alt="Product Main Image" id="main-product-image">
+                        </div>
+                        <div class="col-12">
+                            <div class="row g-2">
+                                <div class="col-auto">
+                                    <img src="500mlsunset.png" class="product-gallery-thumbnail rounded" data-target="500mlsunset.png" alt="Thumbnail 1">
+                                </div>
+                                <div class="col-auto">
+                                    <img src="250mlsunset.png" class="product-gallery-thumbnail rounded" data-target="250mlsunset.png" alt="Thumbnail 2">
+                                </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h5 class="text-muted">Drinks</h5>
+                    <h2 class="fw-bold mb-3">SUNSET CITRUS</h2>
+                    <div class="star-rating small mb-3">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-half text-warning"></i>
+                        <span class="text-muted small ms-2">5 reviews</span>
+                    </div>
+                    <h3 class="text-success fw-bold mb-4">$3</h3>
+
+                    <div class="mb-4">
+                        <label for="productVariant" class="form-label">Variant</label>
+                        <select class="form-select w-50" id="productVariant">
+                            <option selected>250ml</option>
+                            <option>500ml</option>
+                            <option>1 liter</option>
+                        </select>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="input-group w-50 me-3">
+                            <button class="btn btn-outline-success" type="button" id="button-minus">-</button>
+                            <input type="text" class="form-control text-center" value="1" id="product-quantity">
+                            <button class="btn btn-outline-success" type="button" id="button-plus">+</button>
+                        </div>
+                        <button class="btn btn-dark py-2 px-4 rounded-pill">Add to cart</button>
+                    </div>
+
+                    <p class="small text-muted mb-4">Availability: 10 in stock</p>
+                    <p class="small text-muted">
+                        SHARE ON: 
+                        <a href="#" class="text-muted me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-muted me-2"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-muted me-2"><i class="bi bi-instagram"></i></a>
+                    </p>
+
+                </div>
+            </div>
+
+            <hr class="my-5">
+
+            <div class="row">
+                <div class="col-12">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active text-success fw-bold" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab" aria-controls="description" aria-selected="true">Description</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link text-success fw-bold" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false">Reviews (5)</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content pt-3" id="myTabContent">
+                        <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h5 class="fw-bold mb-3">Additional Information</h5>
+                                    <table class="table table-borderless w-75">
+                                        <tbody>
+                                            <tr>
+                                                <td class="fw-bold">FLAVOUR</td>
+                                                <td>Sunset Citrus</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">DESCRIPTION</td>
+                                                <td>Perpaduan menyegarkan dari ekstrak jeruk sunkist, sedikit jahe hangat, dan sentuhan kayu manis. Minuman ini menangkap sensasi hangatnya matahari terbenam dengan rasa citrus yang cerah dan *spicy* yang lembut.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-lg-6">
+                                    <p>
+                                        Minuman ringan berkarbonasi yang menggunakan ekstrak dan aroma alami dari rempah-rempah
+                                        dan buah-buahan unik khas Indonesia (Nusantara), sebagai alternatif yang
+                                        lebih sehat dari minuman manis biasa.
+                                    </p>
+                                    <h5 class="fw-bold mb-3">Product details</h5>
+                                    <ul class="list-unstyled checklist">
+                                        <li>Low calorie</li>
+                                        <li>No artificial sweetener</li>
+                                        <li>No preservatives</li>
+                                        <li>Authentic Nusantara flavor</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                            <h5 class="fw-bold mb-4">5 Customer Reviews</h5>
+                            
+                            <div class="review-card mb-3 p-3 rounded">
+                                <h6 class="fw-bold">Bunga Sari</h6>
+                                <div class="star-rating small mb-2">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
+                                <p class="small text-muted">"Sunset Citrus benar-benar luar biasa! Rasa jeruknya cerah sekali, dan hangat jahenya pas. Menyegarkan dan sehat. Pasti akan beli lagi!"</p>
+                            </div>
+                            
+                            <div class="review-card mb-3 p-3 rounded">
+                                <h6 class="fw-bold">Adi Nugroho</h6>
+                                <div class="star-rating small mb-2">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-half text-warning"></i>
+                                </div>
+                                <p class="small text-muted">"Botol 500ml pas untuk menemani kerja. Rasa kayu manisnya lembut, tidak terlalu mendominasi. Kualitas premium, sangat direkomendasikan."</p>
+                            </div>
+
+                            <div class="review-card mb-3 p-3 rounded">
+                                <h6 class="fw-bold">Rina Dewi</h6>
+                                <div class="star-rating small mb-2">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star text-warning"></i>
+                                </div>
+                                <p class="small text-muted">"Saya suka Nusa Dew karena tidak terlalu manis. Varian ini enak, tapi sedikit jahe di akhir agak kuat. Overall bintang 4!"</p>
+                            </div>
+
+                            <div class="review-card mb-3 p-3 rounded">
+                                <h6 class="fw-bold">Fajar Hidayat</h6>
+                                <div class="star-rating small mb-2">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
+                                <p class="small text-muted">"Pengiriman cepat dan packaging sangat aman! Sunset Citrus adalah rasa favorit baru saya. Cocok sebagai pengganti soda manis."</p>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+    <footer class="footer pt-5">
+        <div class="container">
+            <div class="row pt-5 justify-content-center">
+                <div class="col-md-6 col-12 text-center">
+                    <h2 class="fw-bold">Subscribe</h2>
+                    <p class="small">Sign up for newsletter</p>
+                    <form class="d-flex mt-5">
+                        <input class="form-control rounded-pill rounded-end-0 py-2" type="search"
+                            placeholder="Your email" aria-label="Search" />
+                        <button class="btn btn-white rounded-pill px-4 py-2 fw-bold rounded-start-0"
+                            type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row py-5 my-5">
+                <div class="col-12 d-md-none text-center mb-5">
+                    <h1>Nusa Dew</h1>
+                    <p>Minuman ringan berkarbonasi yang menggunakan ekstrak dan aroma alami dari rempah-rempah dan
+                        buah-buahan unik khas Indonesia (Nusantara), sebagai alternatif yang lebih sehat dari minuman
+                        manis biasa.
+                    </p>
+                    <div class="row justify-content-center mt-5">
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="#"
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                        </div>
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="#"
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+                        </div>
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="#"
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
+                                <i class="bi bi-instagram"></i>
+
+                            </a>
+                        </div>
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="#"
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-md-start text-center">
+                    <ul class="list-unstyled">
+                        <li class="fw-bold">Testimonials</li>
+                        <li class="small"> <a href="#" class="nav-link mt-2">Customer Reviews</a></li>
+                        <li class="small"> <a href="#" class="nav-link mt-2">Video Testimonial</a></li>
+                        <li class="small"> <a href="#" class="nav-link mt-2">Influencers Stories</a></li>
+                        <li class="small"> <a href="#" class="nav-link mt-2">Before & After</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 d-md-block d-none text-center">
+                    <h1>Nusa Dew</h1>
+                    <p>Minuman ringan berkarbonasi yang menggunakan ekstrak dan aroma alami dari rempah-rempah dan
+                        buah-buahan unik khas Indonesia (Nusantara), sebagai alternatif yang lebih sehat dari minuman
+                        manis biasa.
+                    </p>
+                    <div class="row justify-content-center mt-5">
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="#"
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                        </div>
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="#"
+                                class="btn btn-white rounded-circle p-2  btn-icon text-icon text-center ">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+                        </div>
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="#"
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
+                                <i class="bi bi-instagram"></i>
+
+                            </a>
+                        </div>
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="#"
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-md-end text-center">
+                    <ul class="list-unstyled">
+                        <li class="fw-bold">About Us</li>
+                        <li class="small"> <a href="#" class="nav-link mt-2">Our Story</a></li>
+                        <li class="small"> <a href="#" class="nav-link mt-2">Contact</a></li>
+                        <li class="small"> <a href="#" class="nav-link mt-2">Terms of Service</a></li>
+                        <li class="small"> <a href="#" class="nav-link mt-2">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <div class="copy">
+        <p class="text-center small mt-4">Copyright © 2024 Nusa Dew. All rights reserved.</p>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Functionality for image gallery/thumbnails
+            const mainImage = document.getElementById('main-product-image');
+            const thumbnails = document.querySelectorAll('.product-gallery-thumbnail');
+            
+            // Set initial active thumbnail (optional, but good practice)
+            if (thumbnails.length > 0) {
+                thumbnails[0].classList.add('active');
+            }
+
+
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    // Update main image
+                    mainImage.src = this.getAttribute('data-target');
+
+                    // Update active class
+                    thumbnails.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Functionality for quantity buttons
+            const quantityInput = document.getElementById('product-quantity');
+            const minusButton = document.getElementById('button-minus');
+            const plusButton = document.getElementById('button-plus');
+
+            minusButton.addEventListener('click', () => {
+                let currentQuantity = parseInt(quantityInput.value);
+                if (currentQuantity > 1) {
+                    quantityInput.value = currentQuantity - 1;
+                }
+            });
+
+            plusButton.addEventListener('click', () => {
+                let currentQuantity = parseInt(quantityInput.value);
+                // Batasan stok diabaikan untuk demo ini, cukup tambahkan
+                quantityInput.value = currentQuantity + 1;
+            });
+
+            // Initialize Owl Carousel (dibiarkan dalam komentar jika tidak ada elemen owl-carousel di halaman ini)
+
+        });
+    </script>
+</body>
+
+</html>
