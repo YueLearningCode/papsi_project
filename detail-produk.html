@@ -2,80 +2,53 @@
 <html lang="en">
 
 <head>
+    <!-- Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Favicon -->
     <link rel="icon" href="image/logo.png" type="image/png">
 
-    <title>Detail Produk | Nusa Dew</title>
+    <!-- Title -->
+    <title>PAPSI Project</title>
 
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style/styles.css">
 
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
+    <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <!-- Owl Carousel JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
+    <!-- Custom Script -->
     <script src="js/script.js"></script>
 
+    <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-<link rel="stylesheet" href="style.css">
-    <style>
-        :root {
-            --green: #2c5f2d; /* Menggunakan warna hijau dari identitas Nusa Dew */
-            --soft-bg: #f8f9fa; /* Warna latar belakang ringan */
-        }
-        .page-header {
-            padding-top: 150px;
-            padding-bottom: 50px;
-            background-color: var(--soft-bg);
-        }
-
-        .product-gallery-thumbnail {
-            cursor: pointer;
-            border: 1px solid transparent;
-            transition: border-color 0.3s ease;
-            width: 100px; /* Ukuran thumbnail */
-            height: 100px;
-            object-fit: cover;
-        }
-
-        .product-gallery-thumbnail.active {
-            border-color: var(--green); /* Warna border aktif */
-        }
-        
-        /* Mengubah warna teks tab yang aktif menjadi warna brand */
-        .nav-link.active.text-success.fw-bold {
-            color: var(--green) !important;
-            border-color: var(--green) !important;
-        }
-
-        /* Styling untuk review */
-        .review-card {
-            border-left: 3px solid var(--green);
-            padding-left: 15px;
-            margin-bottom: 20px;
-            background-color: #fcfcfc;
-        }
-    </style>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-none fixed-top py-3">
+     <nav class="navbar navbar-expand-lg bg-none fixed-top py-3">
         <div class="container-fluid mx-md-5 px-lg-5   ">
             <div id="navbar-pc" class="row w-100 d-lg-flex d-none justify-content-between align-items-center">
                 <div class="col-lg-4 sosmed-list">
+
                     <div class="row">
                         <div class="col-auto px-1">
                             <a style="line-height: normal;" href="#"
@@ -93,6 +66,7 @@
                             <a style="line-height: normal;" href="#"
                                 class="btn btn-white rounded-circle p-2  btn-icon text-center ">
                                 <i class="bi bi-instagram"></i>
+
                             </a>
                         </div>
                         <div class="col-auto px-1">
@@ -112,19 +86,38 @@
                 <div class="col-4 menu-list">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+
+                            <!-- HOME -->
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home</a>
+                                <a class="nav-link" href="index.html">
+                                    Home
+                                </a>
                             </li>
+
+                            <!-- SHOP -->
                             <li class="nav-item ">
-                                <a class="nav-link" href="shop.html">Shop</a>
+                                <a class="nav-link" href="shop.html">
+                                    Shop
+                                </a>
                             </li>
+
+                            <!-- TESTIMONIAL -->
                             <li class="nav-item ">
-                                <a class="nav-link" href="testimonial.html">Testimonial</a>
+                                <a class="nav-link" href="testimonial.html">
+                                    Testimonial
+                                </a>
                             </li>
+
+                            <!-- ABOUT US -->
                             <li class="nav-item ">
-                                <a class="nav-link" href="about.html">About Us</a>
+                                <a class="nav-link" href="about.html">
+                                    About Us
+                                </a>
                             </li>
+
                         </ul>
+
+
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -145,41 +138,191 @@
                             <form role="search">
                                 <input class="form-control rounded-pill py-2  me-2" type="search" placeholder="Search"
                                     aria-label="Search" />
+
                             </form>
                         </div>
+
                     </div>
+
                 </div>
                 <div class="col-12 menu-list2">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+
+                            <!-- HOME -->
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home</a>
+                                <a class="nav-link" href="index.html">
+                                    Home
+                                </a>
                             </li>
+
+                            <!-- SHOP -->
                             <li class="nav-item">
-                                <a class="nav-link" href="shop.html">Shop</a>
+                                <a class="nav-link" href="shop.html">
+                                    Shop
+                                </a>
                             </li>
+
+                            <!-- TESTIMONIAL -->
                             <li class="nav-item">
-                                <a class="nav-link" href="testimonial.html">Testimonial</a>
+                                <a class="nav-link" href="testimonial.html">
+                                    Testimonial
+                                </a>
                             </li>
+
+                            <!-- ABOUT US -->
                             <li class="nav-item">
-                                <a class="nav-link" href="about.html">About Us</a>
+                                <a class="nav-link" href="about.html">
+                                    About Us
+                                </a>
                             </li>
+
                         </ul>
+
+
                     </div>
                 </div>
             </div>
 
             <div id="navbar-tablet"
                 class="row w-100 d-lg-none d-md-flex d-none align-items-center justify-content-between">
+                <div class="col-md-auto">
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#sidebar" aria-controls="sidebar">
+                                <span class="bi bi-list text-white"></span>
+                            </button>
+                        </div>
+
+                        <div class="col-auto">
+                            <a class="navbar-brand me-0 text-white" href="#">
+                                <img src="image/logo.png" alt="Logo" width="75" height="75"
+                                    class="d-inline-block align-text-top ">
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
 
-            <div id="navbar-mobile" class="row w-100 d-lg-none d-md-none align-items-center justify-content-between">
+                <div class="col-md-auto ">
+                    <div class="row justify-content-end">
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="cart.html"
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
+                                <i class="bi bi-cart"></i>
+                            </a>
+                        </div>
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="#"
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
+                                <i class="bi bi-heart-fill"></i>
+                            </a>
+                        </div>
+                        <div class="col-auto px-1">
+                            <form role="search">
+                                <input class="form-control rounded-pill py-2  me-2" type="search" placeholder="Search"
+                                    aria-label="Search" />
+
+                            </form>
+                        </div>
+
+                    </div>
+
                 </div>
+            </div>
+
+            <div id="navbar-mobile" class="row w-100 d-lg-none d-md-none align-items-center justify-content-between">
+                <div class="col-auto">
+                    <div class="row align-items-center g-0">
+                        <div class="col-auto">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#sidebar" aria-controls="sidebar">
+                                <span class="bi bi-list text-white"></span>
+                            </button>
+                        </div>
+
+                        <div class="col-auto">
+                            <a style="line-height: normal;" href="#" data-bs-target="#searchModal"
+                                data-bs-toggle="modal" class="p-2 text-center text-white">
+                                <i class="bi bi-search"></i>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="col-auto me-2">
+                    <a class="navbar-brand me-0 text-white" href="#">
+                        <img src="image/logo.png" alt="Logo" width="50" height="50"
+                            class="d-inline-block align-text-top ">
+                    </a>
+                </div>
+                <div class="col-auto ">
+                    <div class="row justify-content-end">
+                        <div class="col-auto px-1">
+                            <a style="line-height: normal;" href="cart.html" class="p-2 text-center text-white">
+                                <i class="bi bi-cart"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
         </div>
     </nav>
-    <section class="page-header">
+
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-pill">
+                <form role="search" class="d-flex">
+                    <input class="form-control py-2 rounded-pill rounded-end-0" type="search" placeholder="Search"
+                        aria-label="Search" />
+                    <button type="submit" class="btn btn-white rounded-pill rounded-start-0"><i
+                            class="bi bi-search"></i></button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="sidebar"
+        aria-labelledby="sidebarLabel">
+        <div class="offcanvas-header">
+            <img src="image/logo.png" class="img-fluid" width="75" alt="">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-unstyled">
+                <li class="py-3"><a class="fw-bold text-success text-decoration-none" href="#">Home</a></li>
+                <li class="py-3"> <a class="fw-bold text-success text-decoration-none" href="#shopCollapse"
+                        role="button">
+                        Shop
+                    </a>
+                </li>
+                <li class="py-3"> <a class="fw-bold text-success text-decoration-none" href="#testimonialCollapse"
+                        role="button">
+                        Testimonial
+                    </a>
+                </li>
+                <li class="py-3"> <a class="fw-bold text-success text-decoration-none" role="button">
+                        About Us
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    
+    <section class="cart-hero">
         <div class="container">
-            <p class="text-muted small">HOME / SHOP / <span class="text-success">SUNSET CITRUS</span></p>
+            <div class="row text-center">
+                <div class="col-12">
+                    <h1 class="fw-bold text-white">Detail Produk</h1>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -189,17 +332,20 @@
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <div class="row">
                         <div class="col-12 mb-3">
-                            <img src="image/1litersunset.png" class="img-fluid rounded" alt="Product Main Image" id="main-product-image">
+                            <img src="image/1litersunset.png" class="img-fluid rounded" alt="Product Main Image"
+                                id="main-product-image">
                         </div>
                         <div class="col-12">
                             <div class="row g-2">
                                 <div class="col-auto">
-                                    <img src="image/500mlsunset.png" class="product-gallery-thumbnail rounded" data-target="image/500mlsunset.png" alt="Thumbnail 1">
+                                    <img src="image/500mlsunset.png" class="product-gallery-thumbnail rounded"
+                                        data-target="image/500mlsunset.png" alt="Thumbnail 1">
                                 </div>
                                 <div class="col-auto">
-                                    <img src="image/250mlsunset.png" class="product-gallery-thumbnail rounded" data-target="image/250mlsunset.png" alt="Thumbnail 2">
+                                    <img src="image/250mlsunset.png" class="product-gallery-thumbnail rounded"
+                                        data-target="image/250mlsunset.png" alt="Thumbnail 2">
                                 </div>
-                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -215,7 +361,7 @@
                         <i class="bi bi-star-half text-warning"></i>
                         <span class="text-muted small ms-2">5 reviews</span>
                     </div>
-                    <h3 class="text-success fw-bold mb-4">$3</h3>
+                    <h3 class="text-success fw-bold mb-4">Rp. 13.0000</h3>
 
                     <div class="mb-4">
                         <label for="productVariant" class="form-label">Variant</label>
@@ -232,16 +378,11 @@
                             <input type="text" class="form-control text-center" value="1" id="product-quantity">
                             <button class="btn btn-outline-success" type="button" id="button-plus">+</button>
                         </div>
-                        <button class="btn btn-dark py-2 px-4 rounded-pill">Add to cart</button>
+                        <button class="btn btn-success py-2 px-4 rounded-pill">Add to cart</button>
                     </div>
 
                     <p class="small text-muted mb-4">Availability: 10 in stock</p>
-                    <p class="small text-muted">
-                        SHARE ON: 
-                        <a href="#" class="text-muted me-2"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-muted me-2"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#" class="text-muted me-2"><i class="bi bi-instagram"></i></a>
-                    </p>
+                   
 
                 </div>
             </div>
@@ -252,18 +393,23 @@
                 <div class="col-12">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active text-success fw-bold" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab" aria-controls="description" aria-selected="true">Description</button>
+                            <button class="nav-link active text-success fw-bold" id="description-tab"
+                                data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab"
+                                aria-controls="description" aria-selected="true">Description</button>
                         </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link text-success fw-bold" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false">Reviews (5)</button>
+                        <li class="nav-item " role="presentation">
+                            <button class="nav-link text-success fw-bold" id="reviews-tab" data-bs-toggle="tab"
+                                data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews"
+                                aria-selected="false">Reviews (5)</button>
                         </li>
                     </ul>
                     <div class="tab-content pt-3" id="myTabContent">
-                        <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+                        <div class="tab-pane fade show active" id="description" role="tabpanel"
+                            aria-labelledby="description-tab">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <h5 class="fw-bold mb-3">Additional Information</h5>
-                                    <table class="table table-borderless w-75">
+                                    <table class="table bg-transparent table-borderless w-75 desc-table">
                                         <tbody>
                                             <tr>
                                                 <td class="fw-bold">FLAVOUR</td>
@@ -271,14 +417,18 @@
                                             </tr>
                                             <tr>
                                                 <td class="fw-bold">DESCRIPTION</td>
-                                                <td>Perpaduan menyegarkan dari ekstrak jeruk sunkist, sedikit jahe hangat, dan sentuhan kayu manis. Minuman ini menangkap sensasi hangatnya matahari terbenam dengan rasa citrus yang cerah dan *spicy* yang lembut.</td>
+                                                <td>Perpaduan menyegarkan dari ekstrak jeruk sunkist, sedikit jahe
+                                                    hangat, dan sentuhan kayu manis. Minuman ini menangkap sensasi
+                                                    hangatnya matahari terbenam dengan rasa citrus yang cerah dan
+                                                    *spicy* yang lembut.</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
                                 <div class="col-lg-6">
                                     <p>
-                                        Minuman ringan berkarbonasi yang menggunakan ekstrak dan aroma alami dari rempah-rempah
+                                        Minuman ringan berkarbonasi yang menggunakan ekstrak dan aroma alami dari
+                                        rempah-rempah
                                         dan buah-buahan unik khas Indonesia (Nusantara), sebagai alternatif yang
                                         lebih sehat dari minuman manis biasa.
                                     </p>
@@ -295,7 +445,7 @@
 
                         <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
                             <h5 class="fw-bold mb-4">5 Customer Reviews</h5>
-                            
+
                             <div class="review-card mb-3 p-3 rounded">
                                 <h6 class="fw-bold">Bunga Sari</h6>
                                 <div class="star-rating small mb-2">
@@ -305,9 +455,10 @@
                                     <i class="bi bi-star-fill text-warning"></i>
                                     <i class="bi bi-star-fill text-warning"></i>
                                 </div>
-                                <p class="small text-muted">"Sunset Citrus benar-benar luar biasa! Rasa jeruknya cerah sekali, dan hangat jahenya pas. Menyegarkan dan sehat. Pasti akan beli lagi!"</p>
+                                <p class="small text-muted">"Sunset Citrus benar-benar luar biasa! Rasa jeruknya cerah
+                                    sekali, dan hangat jahenya pas. Menyegarkan dan sehat. Pasti akan beli lagi!"</p>
                             </div>
-                            
+
                             <div class="review-card mb-3 p-3 rounded">
                                 <h6 class="fw-bold">Adi Nugroho</h6>
                                 <div class="star-rating small mb-2">
@@ -317,7 +468,8 @@
                                     <i class="bi bi-star-fill text-warning"></i>
                                     <i class="bi bi-star-half text-warning"></i>
                                 </div>
-                                <p class="small text-muted">"Botol 500ml pas untuk menemani kerja. Rasa kayu manisnya lembut, tidak terlalu mendominasi. Kualitas premium, sangat direkomendasikan."</p>
+                                <p class="small text-muted">"Botol 500ml pas untuk menemani kerja. Rasa kayu manisnya
+                                    lembut, tidak terlalu mendominasi. Kualitas premium, sangat direkomendasikan."</p>
                             </div>
 
                             <div class="review-card mb-3 p-3 rounded">
@@ -329,7 +481,8 @@
                                     <i class="bi bi-star-fill text-warning"></i>
                                     <i class="bi bi-star text-warning"></i>
                                 </div>
-                                <p class="small text-muted">"Saya suka Nusa Dew karena tidak terlalu manis. Varian ini enak, tapi sedikit jahe di akhir agak kuat. Overall bintang 4!"</p>
+                                <p class="small text-muted">"Saya suka Nusa Dew karena tidak terlalu manis. Varian ini
+                                    enak, tapi sedikit jahe di akhir agak kuat. Overall bintang 4!"</p>
                             </div>
 
                             <div class="review-card mb-3 p-3 rounded">
@@ -341,13 +494,14 @@
                                     <i class="bi bi-star-fill text-warning"></i>
                                     <i class="bi bi-star-fill text-warning"></i>
                                 </div>
-                                <p class="small text-muted">"Pengiriman cepat dan packaging sangat aman! Sunset Citrus adalah rasa favorit baru saya. Cocok sebagai pengganti soda manis."</p>
+                                <p class="small text-muted">"Pengiriman cepat dan packaging sangat aman! Sunset Citrus
+                                    adalah rasa favorit baru saya. Cocok sebagai pengganti soda manis."</p>
                             </div>
-                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-    
+
         </div>
     </section>
     <footer class="footer pt-5">
@@ -465,7 +619,7 @@
             // Functionality for image gallery/thumbnails
             const mainImage = document.getElementById('main-product-image');
             const thumbnails = document.querySelectorAll('.product-gallery-thumbnail');
-            
+
             // Set initial active thumbnail (optional, but good practice)
             if (thumbnails.length > 0) {
                 thumbnails[0].classList.add('active');
@@ -473,7 +627,7 @@
 
 
             thumbnails.forEach(thumbnail => {
-                thumbnail.addEventListener('click', function() {
+                thumbnail.addEventListener('click', function () {
                     // Update main image
                     mainImage.src = this.getAttribute('data-target');
 
@@ -509,5 +663,3 @@
 
 
 </html>
-
-

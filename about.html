@@ -2,70 +2,53 @@
 <html lang="en">
 
 <head>
+    <!-- Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Favicon -->
     <link rel="icon" href="image/logo.png" type="image/png">
 
-    <title>About Us | PAPSI Project</title>
+    <!-- Title -->
+    <title>PAPSI Project</title>
 
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style/styles.css">
 
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="js/script.js"></script>
+
+    <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-
-    <script src="js/script.js"></script>
-<link rel="stylesheet" href="style.css">
-    <style>
-        .page-header {
-            padding-top: 150px;
-            padding-bottom: 50px;
-            background-color: var(--soft-bg);
-            text-align: center;
-        }
-
-        .about-section {
-            padding-top: 50px;
-            padding-bottom: 50px;
-        }
-
-        .quote-box {
-            background-color: #e0e7ff; /* Soft blue from CSS variable */
-            padding: 30px;
-            border-radius: 15px;
-        }
-        
-        /* Gaya tambahan agar lebih mirip layout di gambar */
-        .content-block-image {
-            background-color: #cccccc; /* Warna abu-abu placeholder */
-            min-height: 300px;
-            border-radius: 15px;
-        }
-        
-        .content-block-small-image {
-            background-color: #cccccc; /* Warna abu-abu placeholder */
-            min-height: 200px;
-            border-radius: 15px;
-        }
-        
-
-    </style>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-none fixed-top py-3">
+     <nav class="navbar navbar-expand-lg bg-none fixed-top py-3">
         <div class="container-fluid mx-md-5 px-lg-5   ">
             <div id="navbar-pc" class="row w-100 d-lg-flex d-none justify-content-between align-items-center">
                 <div class="col-lg-4 sosmed-list">
+
                     <div class="row">
                         <div class="col-auto px-1">
                             <a style="line-height: normal;" href="#"
@@ -83,6 +66,7 @@
                             <a style="line-height: normal;" href="#"
                                 class="btn btn-white rounded-circle p-2  btn-icon text-center ">
                                 <i class="bi bi-instagram"></i>
+
                             </a>
                         </div>
                         <div class="col-auto px-1">
@@ -102,27 +86,46 @@
                 <div class="col-4 menu-list">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+
+                            <!-- HOME -->
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="index.html">Home</a>
+                                <a class="nav-link" href="index.html">
+                                    Home
+                                </a>
                             </li>
-                            <li class="nav-item dropdown-hover">
-                                <a class="nav-link text-white" href="#" role="button">Shop</a>
+
+                            <!-- SHOP -->
+                            <li class="nav-item ">
+                                <a class="nav-link" href="shop.html">
+                                    Shop
+                                </a>
                             </li>
-                            <li class="nav-item dropdown-hover">
-                                <a class="nav-link text-white" href="#" role="button">Testimonial</a>
+
+                            <!-- TESTIMONIAL -->
+                            <li class="nav-item ">
+                                <a class="nav-link" href="testimonial.html">
+                                    Testimonial
+                                </a>
                             </li>
-                            <li class="nav-item dropdown-hover">
-                                <a class="nav-link text-white" href="#" role="button">About Us</a>
+
+                            <!-- ABOUT US -->
+                            <li class="nav-item ">
+                                <a class="nav-link" href="about.html">
+                                    About Us
+                                </a>
                             </li>
+
                         </ul>
+
+
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="row justify-content-end">
                         <div class="col-auto px-1">
-                            <a style="line-height: normal;" href="#"
+                            <a style="line-height: normal;" href="cart.html"
                                 class="btn btn-white rounded-circle p-2  btn-icon text-center ">
-                                <i class="bi bi-person"></i>
+                                <i class="bi bi-cart"></i>
                             </a>
                         </div>
                         <div class="col-auto px-1">
@@ -135,29 +138,52 @@
                             <form role="search">
                                 <input class="form-control rounded-pill py-2  me-2" type="search" placeholder="Search"
                                     aria-label="Search" />
+
                             </form>
                         </div>
+
                     </div>
+
                 </div>
                 <div class="col-12 menu-list2">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+
+                            <!-- HOME -->
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="index.html">Home</a>
+                                <a class="nav-link" href="index.html">
+                                    Home
+                                </a>
                             </li>
-                            <li class="nav-item dropdown-hover">
-                                <a class="nav-link text-white" href="#" role="button">Shop</a>
+
+                            <!-- SHOP -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="shop.html">
+                                    Shop
+                                </a>
                             </li>
-                            <li class="nav-item dropdown-hover">
-                                <a class="nav-link text-white" href="#" role="button">Testimonial</a>
+
+                            <!-- TESTIMONIAL -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="testimonial.html">
+                                    Testimonial
+                                </a>
                             </li>
-                            <li class="nav-item dropdown-hover">
-                                <a class="nav-link text-white" href="#" role="button">About Us</a>
+
+                            <!-- ABOUT US -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">
+                                    About Us
+                                </a>
                             </li>
+
                         </ul>
+
+
                     </div>
                 </div>
             </div>
+
             <div id="navbar-tablet"
                 class="row w-100 d-lg-none d-md-flex d-none align-items-center justify-content-between">
                 <div class="col-md-auto">
@@ -168,6 +194,7 @@
                                 <span class="bi bi-list text-white"></span>
                             </button>
                         </div>
+
                         <div class="col-auto">
                             <a class="navbar-brand me-0 text-white" href="#">
                                 <img src="image/logo.png" alt="Logo" width="75" height="75"
@@ -175,13 +202,15 @@
                             </a>
                         </div>
                     </div>
+
                 </div>
+
                 <div class="col-md-auto ">
                     <div class="row justify-content-end">
                         <div class="col-auto px-1">
-                            <a style="line-height: normal;" href="#"
+                            <a style="line-height: normal;" href="cart.html"
                                 class="btn btn-white rounded-circle p-2  btn-icon text-center ">
-                                <i class="bi bi-person"></i>
+                                <i class="bi bi-cart"></i>
                             </a>
                         </div>
                         <div class="col-auto px-1">
@@ -194,11 +223,15 @@
                             <form role="search">
                                 <input class="form-control rounded-pill py-2  me-2" type="search" placeholder="Search"
                                     aria-label="Search" />
+
                             </form>
                         </div>
+
                     </div>
+
                 </div>
             </div>
+
             <div id="navbar-mobile" class="row w-100 d-lg-none d-md-none align-items-center justify-content-between">
                 <div class="col-auto">
                     <div class="row align-items-center g-0">
@@ -208,13 +241,17 @@
                                 <span class="bi bi-list text-white"></span>
                             </button>
                         </div>
+
                         <div class="col-auto">
                             <a style="line-height: normal;" href="#" data-bs-target="#searchModal"
                                 data-bs-toggle="modal" class="p-2 text-center text-white">
                                 <i class="bi bi-search"></i>
                             </a>
                         </div>
+
+
                     </div>
+
                 </div>
                 <div class="col-auto me-2">
                     <a class="navbar-brand me-0 text-white" href="#">
@@ -225,15 +262,18 @@
                 <div class="col-auto ">
                     <div class="row justify-content-end">
                         <div class="col-auto px-1">
-                            <a style="line-height: normal;" href="#" class="p-2 text-center text-white">
+                            <a style="line-height: normal;" href="cart.html" class="p-2 text-center text-white">
                                 <i class="bi bi-cart"></i>
                             </a>
                         </div>
+
                     </div>
+
                 </div>
             </div>
         </div>
     </nav>
+
     <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content rounded-pill">
@@ -242,10 +282,12 @@
                         aria-label="Search" />
                     <button type="submit" class="btn btn-white rounded-pill rounded-start-0"><i
                             class="bi bi-search"></i></button>
+
                 </form>
             </div>
         </div>
     </div>
+
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="sidebar"
         aria-labelledby="sidebarLabel">
         <div class="offcanvas-header">
@@ -254,152 +296,109 @@
         </div>
         <div class="offcanvas-body">
             <ul class="list-unstyled">
-                <li class="py-3"><a class="fw-bold text-success text-decoration-none" href="index.html">Home</a></li>
-                <li class="py-3"> <a class="fw-bold text-success text-decoration-none" data-bs-toggle="collapse"
-                        href="#shopCollapse" role="button" aria-expanded="false" aria-controls="shopCollapse">
+                <li class="py-3"><a class="fw-bold text-success text-decoration-none" href="#">Home</a></li>
+                <li class="py-3"> <a class="fw-bold text-success text-decoration-none" href="#shopCollapse"
+                        role="button">
                         Shop
                     </a>
-                    <div class="collapse" id="shopCollapse">
-                        <ul class="list-unstyled ps-3">
-                            <li class="py-2"><a class="text-success text-decoration-none" href="#">All Drinks</a></li>
-                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Best Sellers</a></li>
-                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Seasonal Specials</a>
-                            </li>
-                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Fresh Juice
-                                    Series</a></li>
-                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Gift Packages</a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
-                <li class="py-3"> <a class="fw-bold text-success text-decoration-none" data-bs-toggle="collapse"
-                        href="#testimonialCollapse" role="button" aria-expanded="false"
-                        aria-controls="testimonialCollapse">
+                <li class="py-3"> <a class="fw-bold text-success text-decoration-none" href="#testimonialCollapse"
+                        role="button">
                         Testimonial
                     </a>
-                    <div class="collapse" id="testimonialCollapse">
-                        <ul class="list-unstyled ps-3">
-                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Customer Reviews</a>
-                            </li>
-                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Video
-                                    Testimonials</a></li>
-                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Influencer
-                                    Stories</a></li>
-                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Before & After</a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
-                <li class="py-3"> <a class="fw-bold text-success text-decoration-none" data-bs-toggle="collapse"
-                        href="#aboutUsCollapse" role="button" aria-expanded="false" aria-controls="aboutUsCollapse">
+                <li class="py-3"> <a class="fw-bold text-success text-decoration-none" role="button">
                         About Us
                     </a>
-                    <div class="collapse" id="aboutUsCollapse">
-                        <ul class="list-unstyled ps-3">
-                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Our Story</a></li>
-                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Our Ingredients</a>
-                            </li>
-                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Sustainability</a>
-                            </li>
-                            <li class="py-2"><a class="text-success text-decoration-none" href="#">Contact</a></li>
-                        </ul>
-                    </div>
                 </li>
             </ul>
+
         </div>
     </div>
-    <section class="page-header">
-        <div class="container">
 
-            <h2 class="fw-bold text-success">About Us</h2>
-            <p class="text-muted">Home / About Us</p>
+    <section class="cart-hero">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h1 class="fw-bold text-white">Tentang Kami</h1>
+                </div>
+            </div>
         </div>
     </section>
-    
-    <section class="about-section">
+
+    <section class="about-section my-5">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                <div class="content-block-image" role="img" aria-label="Company building or team photo placeholder" style="background: none;"> 
-                    <img src="image/nusa dew - about us.png" alt="Varian Minuman" class="img-fluid rounded" style="width: 100%; height: 100%; object-fit: cover;"> </div>
+                    <div class="content-block-image" role="img" aria-label="Company building or team photo placeholder"
+                        style="background: none;">
+                        <img src="image/nusa dew - about us.png" alt="Varian Minuman" class="img-fluid rounded"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
                 </div>
                 <div class="col-lg-6">
                     <h3 class="fw-bold">Our Story & Mission</h3>
                     <p>
-                        Nusa Dew lahir dari kerinduan akan kesegaran alami Indonesia. Kami percaya bahwa kekayaan rempah dan buah-buahan Nusantara adalah kunci untuk minuman yang tidak hanya menyegarkan, tetapi juga menyehatkan. Misi kami adalah menghadirkan warisan rasa Indonesia ke dalam bentuk sparkling botanical yang modern dan rendah kalori.
+                        Nusa Dew lahir dari kerinduan akan kesegaran alami Indonesia. Kami percaya bahwa kekayaan rempah
+                        dan buah-buahan Nusantara adalah kunci untuk minuman yang tidak hanya menyegarkan, tetapi juga
+                        menyehatkan. Misi kami adalah menghadirkan warisan rasa Indonesia ke dalam bentuk sparkling
+                        botanical yang modern dan rendah kalori.
                     </p>
                     <p>
-                        Melalui setiap botol Nusa Dew, kami ingin berbagi cita rasa otentik dan energi positif dari alam Indonesia, membangun kepercayaan melalui kualitas dan keamanan produk yang terjamin dengan sertifikasi dari BPOM dan Halal MUI.                    </p>
+                        Melalui setiap botol Nusa Dew, kami ingin berbagi cita rasa otentik dan energi positif dari alam
+                        Indonesia, membangun kepercayaan melalui kualitas dan keamanan produk yang terjamin dengan
+                        sertifikasi dari BPOM dan Halal MUI. </p>
                 </div>
             </div>
 
-            <div class="row my-5">
-                <div class="col-12">
-                    <div class="quote-box">
-                        <div class="d-flex align-items-start">
-                            <i class="bi bi-person-circle fs-1 me-3 text-secondary" role="img" aria-label="User avatar"></i>
-                            <div>
-                                <p class="mb-2">
-                                    "Best herbal drink I've tried this season! The flavor and blend are exquisite, and it's so refreshing. Super refreshing!"
-                                </p>
-                                <footer class="blockquote-footer">Sarah K.</footer>
-                            </div>
-                        </div>
+            <div class="row py-5">
+                <div class="col-lg-6 mb-4 mb-lg-0 mb-5">
+                    <h3 class="fw-bold">Why Choose Us?</h3>
+                    <p>
+                        Nusa Dew adalah pilihan ideal bagi Anda yang mencari kesegaran autentik tanpa mengorbankan
+                        kesehatan. Kami bangga menghadirkan Rasa Autentik Nusantara, menggunakan ekstrak botani dan
+                        rempah asli Indonesia, seperti kunyit, asam jawa, dan bunga kopi, menjadikannya unik di pasaran.
+                        Lebih dari itu, kami berkomitmen pada kesehatan Anda: semua varian rendah kalori, tanpa pemanis
+                        buatan, dan bebas pengawet, memungkinkan Anda menikmati sensasi berkarbonasi tanpa rasa
+                        bersalah.
+                    </p>
+                    <p>
+                        Dengan memilih Nusa Dew, Anda juga turut serta dalam mendukung petani dan produsen lokal,
+                        memastikan Anda mendapatkan produk premium yang tidak hanya baik untuk diri sendiri, tetapi juga
+                        untuk komunitas.
+                    </p>
+
+                    <div class="content-block-image mt-5 py-5" role="img" aria-label="Gambar kemasan box Nusa Dew"
+                        style="background: none;">
+                        <img src="image/box nusa dew.png" alt="box" class="img-fluid rounded"
+                            style="width: 100%; height: 300px; object-fit: cover;">
                     </div>
                 </div>
-            </div>
-            
-            <div class="row my-5">
-    <div class="col-lg-6 mb-4 mb-lg-0">
-        <h3 class="fw-bold">Why Choose Us?</h3>
-        <p>
-            Nusa Dew adalah pilihan ideal bagi Anda yang mencari kesegaran autentik tanpa mengorbankan kesehatan. Kami bangga menghadirkan Rasa Autentik Nusantara, menggunakan ekstrak botani dan rempah asli Indonesia, seperti kunyit, asam jawa, dan bunga kopi, menjadikannya unik di pasaran. Lebih dari itu, kami berkomitmen pada kesehatan Anda: semua varian rendah kalori, tanpa pemanis buatan, dan bebas pengawet, memungkinkan Anda menikmati sensasi berkarbonasi tanpa rasa bersalah.
-        </p>
-        <p>
-            Dengan memilih Nusa Dew, Anda juga turut serta dalam mendukung petani dan produsen lokal, memastikan Anda mendapatkan produk premium yang tidak hanya baik untuk diri sendiri, tetapi juga untuk komunitas.
-        </p>
-        
-        <div class="content-block-image mt-4" role="img" aria-label="Gambar kemasan box Nusa Dew" style="background: none;">
-            <img src="image/box nusa dew.png" alt="box" class="img-fluid rounded" style="width: 100%; height: 300px; object-fit: cover;">
-        </div>
-    </div>
-    
-    <div class="col-lg-6">
-        
-        <div class="content-block-image" role="img" aria-label="Gambar petani lokal" style="background: none;">
-            <img src="image/Petani.png" alt="petani" class="img-fluid rounded" style="width: 100%; height: 300px; object-fit: cover;">
-        </div>
 
-        <h3 class="fw-bold mt-5">Trusted Online Shopping</h3>
-        <p>
-            Kami memastikan pengalaman pembelian Nusa Dew Anda sama mulusnya dengan rasa minumannya. Kami menjamin Kualitas Botol dan Pengemasan Aman; setiap botol dikemas dengan standar tertinggi dan menggunakan perlindungan khusus agar tiba di tangan Anda dalam kondisi utuh dan siap dinikmati.
-        </p>
-        <p>
-            Didukung oleh Pengiriman Cepat dan Layanan Pelanggan yang Responsif, kami siap membantu Anda mulai dari pemilihan varian hingga konfirmasi transaksi. Nikmati kenyamanan berbelanja online dengan berbagai opsi pembayaran yang fleksibel dan terverifikasi di platform kami.
-        </p>
-    </div>
-</div>
+                <div class="col-lg-6">
+
+                    <div class="content-block-image py-5" role="img" aria-label="Gambar petani lokal"
+                        style="background: none;">
+                        <img src="image/Petani.png" alt="petani" class="img-fluid rounded"
+                            style="width: 100%; height: 300px; object-fit: cover;">
+                    </div>
+
+                    <h3 class="fw-bold mt-5">Trusted Online Shopping</h3>
+                    <p>
+                        Kami memastikan pengalaman pembelian Nusa Dew Anda sama mulusnya dengan rasa minumannya. Kami
+                        menjamin Kualitas Botol dan Pengemasan Aman; setiap botol dikemas dengan standar tertinggi dan
+                        menggunakan perlindungan khusus agar tiba di tangan Anda dalam kondisi utuh dan siap dinikmati.
+                    </p>
+                    <p>
+                        Didukung oleh Pengiriman Cepat dan Layanan Pelanggan yang Responsif, kami siap membantu Anda
+                        mulai dari pemilihan varian hingga konfirmasi transaksi. Nikmati kenyamanan berbelanja online
+                        dengan berbagai opsi pembayaran yang fleksibel dan terverifikasi di platform kami.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
-    
-    <div class="subscribe-sticky">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-6 text-center">
-                    <p class="mb-0 fw-bold">Subscribe to our newsletter for 10% off!</p>
-                </div>
-                <div class="col-md-4">
-                    <form class="d-flex">
-                        <input class="form-control rounded-pill rounded-end-0 py-2" type="email"
-                            placeholder="Your email" aria-label="Email" />
-                        <button class="btn btn-white rounded-pill px-4 py-2 fw-bold rounded-start-0"
-                            type="submit">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    
+
     <footer class="footer pt-5">
         <div class="container">
             <div class="row pt-5 justify-content-center">
@@ -500,6 +499,7 @@
     <div class="copy">
         <p class="text-center small mt-4">Copyright © 2024 Nusa Dew. All rights reserved.</p>
     </div>
-    </body>
+</body>
 <script src="script.js"></script>
+
 </html>

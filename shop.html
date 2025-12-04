@@ -3,138 +3,187 @@
 
 <head>
     <!-- Meta -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon -->
-    <link rel="icon" href="image/logo.png" type="image/png" />
+    <link rel="icon" href="image/logo.png" type="image/png">
 
     <!-- Title -->
-    <title>PAPSI Project - Shop</title>
+    <title>PAPSI Project</title>
 
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="style.css" />
-    <!-- Shop Page CSS -->
-    <link rel="stylesheet" href="shop.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style/styles.css">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-    <!-- Owl Carousel CSS (kalau dipakai di halaman lain) -->
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="js/script.js"></script>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <!-- ================= NAVBAR (punyamu, tidak diubah) ================= -->
-    <nav class="navbar navbar-expand-lg bg-none fixed-top py-3" style="background-color: #0a1121;">
-        <div class="container-fluid mx-md-5 px-lg-5">
+
+    <nav class="navbar navbar-expand-lg bg-none fixed-top py-3">
+        <div class="container-fluid mx-md-5 px-lg-5   ">
             <div id="navbar-pc" class="row w-100 d-lg-flex d-none justify-content-between align-items-center">
                 <div class="col-lg-4 sosmed-list">
+
                     <div class="row">
                         <div class="col-auto px-1">
                             <a style="line-height: normal;" href="#"
-                                class="btn btn-white rounded-circle p-2 btn-icon text-center">
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
                                 <i class="bi bi-facebook"></i>
                             </a>
                         </div>
                         <div class="col-auto px-1">
                             <a style="line-height: normal;" href="#"
-                                class="btn btn-white rounded-circle p-2 btn-icon text-center">
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
                                 <i class="bi bi-twitter-x"></i>
                             </a>
                         </div>
                         <div class="col-auto px-1">
                             <a style="line-height: normal;" href="#"
-                                class="btn btn-white rounded-circle p-2 btn-icon text-center">
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
                                 <i class="bi bi-instagram"></i>
+
                             </a>
                         </div>
                         <div class="col-auto px-1">
                             <a style="line-height: normal;" href="#"
-                                class="btn btn-white rounded-circle p-2 btn-icon text-center">
-                                <i class="bi bi-youtube"></i>
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
+                                <i class="bi bi-youtube "></i>
                             </a>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 logo-dew">
                     <a class="navbar-brand me-0 text-white" href="#">
                         <img src="image/logo.png" alt="Logo" width="75" height="75"
-                            class="d-inline-block align-text-top" />
+                            class="d-inline-block align-text-top ">
                     </a>
                 </div>
-
                 <div class="col-4 menu-list">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+
+                            <!-- HOME -->
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home</a>
+                                <a class="nav-link" href="index.html">
+                                    Home
+                                </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="shop.html">Shop</a>
+
+                            <!-- SHOP -->
+                            <li class="nav-item ">
+                                <a class="nav-link" href="shop.html">
+                                    Shop
+                                </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="testimonial.html">Testimonial</a>
+
+                            <!-- TESTIMONIAL -->
+                            <li class="nav-item ">
+                                <a class="nav-link" href="testimonial.html">
+                                    Testimonial
+                                </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">About Us</a>
+
+                            <!-- ABOUT US -->
+                            <li class="nav-item ">
+                                <a class="nav-link" href="about.html">
+                                    About Us
+                                </a>
                             </li>
+
                         </ul>
+
+
                     </div>
                 </div>
-
                 <div class="col-lg-4">
                     <div class="row justify-content-end">
                         <div class="col-auto px-1">
                             <a style="line-height: normal;" href="cart.html"
-                                class="btn btn-white rounded-circle p-2 btn-icon text-center">
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
                                 <i class="bi bi-cart"></i>
                             </a>
                         </div>
                         <div class="col-auto px-1">
                             <a style="line-height: normal;" href="#"
-                                class="btn btn-white rounded-circle p-2 btn-icon text-center">
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
                                 <i class="bi bi-heart-fill"></i>
                             </a>
                         </div>
                         <div class="col-auto px-1">
                             <form role="search">
-                                <input class="form-control rounded-pill py-2 me-2" type="search" placeholder="Search"
+                                <input class="form-control rounded-pill py-2  me-2" type="search" placeholder="Search"
                                     aria-label="Search" />
+
                             </form>
                         </div>
-                    </div>
-                </div>
 
+                    </div>
+
+                </div>
                 <div class="col-12 menu-list2">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+
+                            <!-- HOME -->
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home</a>
+                                <a class="nav-link" href="index.html">
+                                    Home
+                                </a>
                             </li>
+
+                            <!-- SHOP -->
                             <li class="nav-item">
-                                <a class="nav-link active" href="shop.html">Shop</a>
+                                <a class="nav-link" href="shop.html">
+                                    Shop
+                                </a>
                             </li>
+
+                            <!-- TESTIMONIAL -->
                             <li class="nav-item">
-                                <a class="nav-link" href="testimonial.html">Testimonial</a>
+                                <a class="nav-link" href="testimonial.html">
+                                    Testimonial
+                                </a>
                             </li>
+
+                            <!-- ABOUT US -->
                             <li class="nav-item">
-                                <a class="nav-link" href="about.html">About Us</a>
+                                <a class="nav-link" href="about.html">
+                                    About Us
+                                </a>
                             </li>
+
                         </ul>
+
+
                     </div>
                 </div>
             </div>
 
-            <!-- tablet -->
             <div id="navbar-tablet"
                 class="row w-100 d-lg-none d-md-flex d-none align-items-center justify-content-between">
                 <div class="col-md-auto">
@@ -145,40 +194,44 @@
                                 <span class="bi bi-list text-white"></span>
                             </button>
                         </div>
+
                         <div class="col-auto">
                             <a class="navbar-brand me-0 text-white" href="#">
                                 <img src="image/logo.png" alt="Logo" width="75" height="75"
-                                    class="d-inline-block align-text-top" />
+                                    class="d-inline-block align-text-top ">
                             </a>
                         </div>
                     </div>
+
                 </div>
 
-                <div class="col-md-auto">
+                <div class="col-md-auto ">
                     <div class="row justify-content-end">
                         <div class="col-auto px-1">
                             <a style="line-height: normal;" href="cart.html"
-                                class="btn btn-white rounded-circle p-2 btn-icon text-center">
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
                                 <i class="bi bi-cart"></i>
                             </a>
                         </div>
                         <div class="col-auto px-1">
                             <a style="line-height: normal;" href="#"
-                                class="btn btn-white rounded-circle p-2 btn-icon text-center">
+                                class="btn btn-white rounded-circle p-2  btn-icon text-center ">
                                 <i class="bi bi-heart-fill"></i>
                             </a>
                         </div>
                         <div class="col-auto px-1">
                             <form role="search">
-                                <input class="form-control rounded-pill py-2 me-2" type="search" placeholder="Search"
+                                <input class="form-control rounded-pill py-2  me-2" type="search" placeholder="Search"
                                     aria-label="Search" />
+
                             </form>
                         </div>
+
                     </div>
+
                 </div>
             </div>
 
-            <!-- mobile -->
             <div id="navbar-mobile" class="row w-100 d-lg-none d-md-none align-items-center justify-content-between">
                 <div class="col-auto">
                     <div class="row align-items-center g-0">
@@ -188,121 +241,124 @@
                                 <span class="bi bi-list text-white"></span>
                             </button>
                         </div>
+
                         <div class="col-auto">
                             <a style="line-height: normal;" href="#" data-bs-target="#searchModal"
                                 data-bs-toggle="modal" class="p-2 text-center text-white">
                                 <i class="bi bi-search"></i>
                             </a>
                         </div>
-                    </div>
-                </div>
 
+
+                    </div>
+
+                </div>
                 <div class="col-auto me-2">
                     <a class="navbar-brand me-0 text-white" href="#">
                         <img src="image/logo.png" alt="Logo" width="50" height="50"
-                            class="d-inline-block align-text-top" />
+                            class="d-inline-block align-text-top ">
                     </a>
                 </div>
-                <div class="col-auto">
+                <div class="col-auto ">
                     <div class="row justify-content-end">
                         <div class="col-auto px-1">
                             <a style="line-height: normal;" href="cart.html" class="p-2 text-center text-white">
                                 <i class="bi bi-cart"></i>
                             </a>
                         </div>
+
                     </div>
+
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- modal search (punyamu) -->
     <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content rounded-pill">
                 <form role="search" class="d-flex">
                     <input class="form-control py-2 rounded-pill rounded-end-0" type="search" placeholder="Search"
                         aria-label="Search" />
-                    <button type="submit" class="btn btn-white rounded-pill rounded-start-0">
-                        <i class="bi bi-search"></i>
-                    </button>
+                    <button type="submit" class="btn btn-white rounded-pill rounded-start-0"><i
+                            class="bi bi-search"></i></button>
+
                 </form>
             </div>
         </div>
     </div>
 
-    <!-- offcanvas sidebar (punyamu) -->
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="sidebar"
         aria-labelledby="sidebarLabel">
         <div class="offcanvas-header">
-            <img src="image/logo.png" class="img-fluid" width="75" alt="" />
+            <img src="image/logo.png" class="img-fluid" width="75" alt="">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
             <ul class="list-unstyled">
                 <li class="py-3"><a class="fw-bold text-success text-decoration-none" href="#">Home</a></li>
-                <li class="py-3"><a class="fw-bold text-success text-decoration-none" href="#shop">Shop</a></li>
-                <li class="py-3"><a class="fw-bold text-success text-decoration-none"
-                        href="#testimonial">Testimonial</a>
+                <li class="py-3"> <a class="fw-bold text-success text-decoration-none" href="#shopCollapse"
+                        role="button">
+                        Shop
+                    </a>
                 </li>
-                <li class="py-3"><a class="fw-bold text-success text-decoration-none" href="#about">About Us</a></li>
+                <li class="py-3"> <a class="fw-bold text-success text-decoration-none" href="#testimonialCollapse"
+                        role="button">
+                        Testimonial
+                    </a>
+                </li>
+                <li class="py-3"> <a class="fw-bold text-success text-decoration-none" role="button">
+                        About Us
+                    </a>
+                </li>
             </ul>
+
         </div>
     </div>
 
-    <!-- ================= HERO SHOP ================= -->
     <section class="cart-hero" id="shop">
-        <div class="container text-center">
-            <p class="shop-breadcrumb mb-2">
-                Home <span class="sep">/</span> Shop
-            </p>
-            <h1 class="shop-title mb-2">SHOP</h1>
-            <p class="shop-subtitle">
-                Temukan varian Nusa Dew favoritmu – segar, botanikal, dan rendah kalori.
-            </p>
+        <div class="container text-white text-center">
+            <h1 class="mb-2">SHOP</h1>
         </div>
     </section>
 
-    <!-- ================= CATEGORY CIRCLES ================= -->
-    <section class="shop-categories">
+    <section class="shop-categories my-5">
         <div class="container">
             <div class="row justify-content-center g-5 category-row">
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12 text-center">
-                    <div class="circle-wrapper mb-3">
-                        <div class="circle-img-placeholder"></div>
+                    <div class="card p-5">
+                        <h5>Botanical Drinks</h5>
+                        <p class="text-muted small">6 Products</p>
                     </div>
-                    <h5>Botanical Drinks</h5>
-                    <p class="text-muted small">6 Products</p>
+
                 </div>
 
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12 text-center">
-                    <div class="circle-wrapper mb-3">
-                        <div class="circle-img-placeholder"></div>
+                    <div class="card p-5">
+                        <h5>Bee Honey Mix</h5>
+                        <p class="text-muted small">4 Products</p>
                     </div>
-                    <h5>Bee Honey Mix</h5>
-                    <p class="text-muted small">4 Products</p>
+
                 </div>
 
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12 text-center">
-                    <div class="circle-wrapper mb-3">
-                        <div class="circle-img-placeholder"></div>
+                    <div class="card p-5">
+                        <h5>Fresh Botanicals</h5>
+                        <p class="text-muted small">8 Products</p>
                     </div>
-                    <h5>Fresh Botanicals</h5>
-                    <p class="text-muted small">8 Products</p>
+
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ================= MAIN LAYOUT: FILTER + PRODUCTS ================= -->
     <section class="shop-layout">
         <div class="container">
             <div class="row gx-4">
 
-                <!-- ========== SIDEBAR FILTER (KIRI) ========== -->
                 <div class="col-lg-3 col-md-4 col-12 mb-4">
-                    <!-- FLAVOR -->
-                    <div class="filter-group mb-4">
+
+                    <div class="filter-group mb-4 bg-white p-3 rounded-3 shadow-sm">
                         <p class="filter-group-title mb-2">Flavor</p>
 
                         <div class="form-check">
@@ -324,8 +380,7 @@
                         </div>
                     </div>
 
-                    <!-- SWEETNESS -->
-                    <div class="filter-group mb-4">
+                    <div class="filter-group mb-4 bg-white p-3 rounded-3 shadow-sm">
                         <p class="filter-group-title mb-2">Tingkat Manis</p>
 
                         <div class="form-check">
@@ -341,8 +396,7 @@
                         </div>
                     </div>
 
-                    <!-- SIZE -->
-                    <div class="filter-group mb-3">
+                    <div class="filter-group mb-4 bg-white p-3 rounded-3 shadow-sm">
                         <p class="filter-group-title mb-2">Ukuran</p>
 
                         <div class="form-check">
@@ -359,9 +413,7 @@
                     </div>
                 </div>
 
-                <!-- ========== PRODUCT GRID (KANAN) ========== -->
-                <div class="col-lg-9 col-md-8 col-12">
-                    <!-- sort bar -->
+                <div class="col-lg-9 col-md-8 col-12 bg-white p-4 rounded-3 shadow-sm">
                     <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2 sort-bar">
                         <p class="mb-0 text-muted small">
                             Menampilkan <span class="fw-semibold">12</span> dari
@@ -378,11 +430,9 @@
                         </div>
                     </div>
 
-                    <!-- grid produk -->
                     <div class="row product-grid">
-                        <!-- 1 -->
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
-                            <div class="card card-best border-0">
+                            <div class="card card-best border-0 shadow">
                                 <div class="bg-white position-relative">
                                     <img src="image/imgi_40_1-24-600x600.jpg" class="card-img-top img-before mx-auto"
                                         alt="">
@@ -403,9 +453,8 @@
                             </div>
                         </div>
 
-                        <!-- 2 -->
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
-                            <div class="card card-best border-0">
+                            <div class="card card-best border-0 shadow">
                                 <div class="bg-white position-relative">
                                     <img src="image/imgi_40_1-24-600x600.jpg" class="card-img-top img-before mx-auto"
                                         alt="">
@@ -426,9 +475,8 @@
                             </div>
                         </div>
 
-                        <!-- 3 -->
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
-                            <div class="card card-best border-0">
+                            <div class="card card-best border-0 shadow">
                                 <div class="bg-white position-relative">
                                     <img src="image/imgi_40_1-24-600x600.jpg" class="card-img-top img-before mx-auto"
                                         alt="">
@@ -449,9 +497,8 @@
                             </div>
                         </div>
 
-                        <!-- 4 -->
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
-                            <div class="card card-best border-0">
+                            <div class="card card-best border-0 shadow">
                                 <div class="bg-white position-relative">
                                     <img src="image/imgi_40_1-24-600x600.jpg" class="card-img-top img-before mx-auto"
                                         alt="">
@@ -472,9 +519,8 @@
                             </div>
                         </div>
 
-                        <!-- 5–8 (duplikasi gaya yang sama) -->
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
-                            <div class="card card-best border-0">
+                            <div class="card card-best border-0 shadow">
                                 <div class="bg-white position-relative">
                                     <img src="image/imgi_40_1-24-600x600.jpg" class="card-img-top img-before mx-auto"
                                         alt="">
@@ -496,7 +542,7 @@
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
-                            <div class="card card-best border-0">
+                            <div class="card card-best border-0 shadow">
                                 <div class="bg-white position-relative">
                                     <img src="image/imgi_40_1-24-600x600.jpg" class="card-img-top img-before mx-auto"
                                         alt="">
@@ -518,7 +564,7 @@
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
-                            <div class="card card-best border-0">
+                            <div class="card card-best border-0 shadow">
                                 <div class="bg-white position-relative">
                                     <img src="image/imgi_40_1-24-600x600.jpg" class="card-img-top img-before mx-auto"
                                         alt="">
@@ -540,7 +586,7 @@
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
-                            <div class="card card-best border-0">
+                            <div class="card card-best border-0 shadow">
                                 <div class="bg-white position-relative">
                                     <img src="image/imgi_40_1-24-600x600.jpg" class="card-img-top img-before mx-auto"
                                         alt="">
@@ -561,44 +607,23 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- progress & load more -->
-                    <div class="text-center mt-2">
-                        <div class="progress-line-wrapper mb-2">
-                            <div class="progress-line-fill"></div>
-                        </div>
-                        <p class="small text-muted mb-3">
-                            Menampilkan 12 dari 63 produk
-                        </p>
-                        <button class="btn btn-outline-success rounded-pill px-4">
-                            Load More Items
-                        </button>
-                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- ================= ALL TAGS ================= -->
-    <section class="shop-tags">
-        <div class="container">
-            <p class="mb-3 text-uppercase small fw-semibold">All Tags :</p>
-            <div class="tags-wrapper">
-                <span class="tag-pill">sparkling</span>
-                <span class="tag-pill">botanical</span>
-                <span class="tag-pill">low sugar</span>
-                <span class="tag-pill">zero preservative</span>
-                <span class="tag-pill">jamu twist</span>
-                <span class="tag-pill">kopi blossom</span>
-                <span class="tag-pill">aloe lychee</span>
-                <span class="tag-pill">citrus</span>
-                <span class="tag-pill">herbal</span>
-                <span class="tag-pill">fresh</span>
+            <div class="text-center my-5">
+                <div class="progress-line-wrapper mb-2">
+                    <div class="progress-line-fill"></div>
+                </div>
+                <p class="small text-muted mb-3">
+                    Menampilkan 12 dari 63 produk
+                </p>
+                <button class="btn btn-outline-success rounded-pill px-4">
+                    Load More Items
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- ================= FOOTER (punyamu) ================= -->
     <footer class="footer pt-5">
         <div class="container">
             <div class="row pt-5 justify-content-center">
