@@ -3,21 +3,21 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    let lemon1 = document.querySelector(".lemon1");
-    let lemon2 = document.querySelector(".lemon2");
-    let leaf = document.querySelector(".leaf");
+    const lemon1 = document.querySelector(".lemon1");
+    const lemon2 = document.querySelector(".lemon2");
+    const leaf = document.querySelector(".leaf");
 
-    let movement = 25;
+    const movement = 25;
 
     document.body.addEventListener("mousemove", function (e) {
-        let width = window.innerWidth;
-        let height = window.innerHeight;
+        const width = window.innerWidth;
+        const height = window.innerHeight;
 
-        let centerX = width / 2;
-        let centerY = height / 2;
+        const centerX = width / 2;
+        const centerY = height / 2;
 
-        let offsetX = (e.clientX - centerX) / centerX * movement;
-        let offsetY = (e.clientY - centerY) / centerY * movement;
+        const offsetX = (e.clientX - centerX) / centerX * movement;
+        const offsetY = (e.clientY - centerY) / centerY * movement;
 
         if (lemon1) lemon1.style.transform = `translate(calc(-50% + ${offsetX * 0.4}px), ${offsetY * 0.4}px)`;
         if (lemon2) lemon2.style.transform = `translate(calc(-50% + ${offsetX * -0.3}px), ${offsetY * -0.3}px)`;
@@ -31,16 +31,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     window.addEventListener("scroll", function () {
-        let navbar = document.querySelector(".navbar");
-        let medsos = document.querySelector(".sosmed-list");
-        let logo = document.querySelector(".logo-dew");
-        let menuList = document.querySelectorAll(".menu-list, .menu-list2");
+        const navbar = document.querySelector(".navbar");
+        const medsos = document.querySelector(".sosmed-list");
+        const logo = document.querySelector(".logo-dew");
+        const menuList = document.querySelectorAll(".menu-list, .menu-list2");
 
-        let scrolled = window.scrollY > 50;
+        const scrolled = window.scrollY > 50;
 
-        navbar?.classList.toggle("scrolled", scrolled);
-        medsos?.classList.toggle("scrolled", scrolled);
-        logo?.classList.toggle("scrolled", scrolled);
+        navbar.classList.toggle("scrolled", scrolled);
+        medsos.classList.toggle("scrolled", scrolled);
+        logo.classList.toggle("scrolled", scrolled);
         menuList.forEach(menu => menu.classList.toggle("scrolled", scrolled));
     });
 
@@ -48,18 +48,18 @@ document.addEventListener("DOMContentLoaded", () => {
         item.addEventListener('click', e => e.preventDefault());
     });
 
-    let productCols = document.querySelectorAll(
+    const productCols = document.querySelectorAll(
         ".product-grid .col-lg-3, .product-grid .col-md-4, .product-grid .col-sm-6, .product-grid .col-12"
     );
 
     productCols.forEach((col, index) => {
-        let card = col.querySelector(".card-best");
+        const card = col.querySelector(".card-best");
         if (!card) return;
 
-        let titleEl = card.querySelector(".card-title");
+        const titleEl = card.querySelector(".card-title");
         if (!titleEl) return;
 
-        let title = titleEl.textContent.toLowerCase();
+        const title = titleEl.textContent.toLowerCase();
 
         let flavor = "jamu-twist";
         if (title.includes("kopi")) {
@@ -68,9 +68,9 @@ document.addEventListener("DOMContentLoaded", () => {
             flavor = "aloe-lychee";
         }
 
-        let sweetness = index % 2 === 0 ? "low-cal" : "no-sugar";
+        const sweetness = index % 2 === 0 ? "low-cal" : "no-sugar";
 
-        let size = index < 4 ? "250" : "330";
+        const size = index < 4 ? "250" : "330";
 
         col.dataset.flavor = flavor;
         col.dataset.sweetness = sweetness;
@@ -79,21 +79,21 @@ document.addEventListener("DOMContentLoaded", () => {
         col.classList.add("product-item");
     });
 
-    let checkboxes = document.querySelectorAll(".filter-checkbox");
-    let products = document.querySelectorAll(".product-item");
+    const checkboxes = document.querySelectorAll(".filter-checkbox");
+    const products = document.querySelectorAll(".product-item");
 
     function applyFilters() {
-        let activeFilters = {};
+        const activeFilters = {};
 
         checkboxes.forEach((cb) => {
-            let group = cb.dataset.group;
-            let value = cb.value;
+            const group = cb.dataset.group;
+            const value = cb.value;
 
             if (!activeFilters[group]) activeFilters[group] = new Set();
             if (cb.checked) activeFilters[group].add(value);
         });
 
-        let noFilterActive = Object.values(activeFilters).every(set => set.size === 0);
+        const noFilterActive = Object.values(activeFilters).every(set => set.size === 0);
 
         products.forEach((product) => {
             let visible = true;
