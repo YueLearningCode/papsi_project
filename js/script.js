@@ -3,40 +3,40 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const lemon1 = document.querySelector(".lemon1");
-    const lemon2 = document.querySelector(".lemon2");
-    const leaf = document.querySelector(".leaf");
+    let lemon1 = document.querySelector(".lemon1");
+    let lemon2 = document.querySelector(".lemon2");
+    let leaf = document.querySelector(".leaf");
 
-    const movement = 25;
+    let movement = 25;
 
     document.body.addEventListener("mousemove", function (e) {
-        const width = window.innerWidth;
-        const height = window.innerHeight;
+        let width = window.innerWidth;
+        let height = window.innerHeight;
 
-        const centerX = width / 2;
-        const centerY = height / 2;
+        let centerX = width / 2;
+        let centerY = height / 2;
 
-        const offsetX = (e.clientX - centerX) / centerX * movement;
-        const offsetY = (e.clientY - centerY) / centerY * movement;
+        let offsetX = (e.clientX - centerX) / centerX * movement;
+        let offsetY = (e.clientY - centerY) / centerY * movement;
 
         if (lemon1) lemon1.style.transform = `translate(calc(-50% + ${offsetX * 0.4}px), ${offsetY * 0.4}px)`;
         if (lemon2) lemon2.style.transform = `translate(calc(-50% + ${offsetX * -0.3}px), ${offsetY * -0.3}px)`;
-        if (leaf)   leaf.style.transform   = `translate(calc(-50% + ${offsetX * 0.6}px), ${offsetY * 0.6}px)`;
+        if (leaf) leaf.style.transform = `translate(calc(-50% + ${offsetX * 0.6}px), ${offsetY * 0.6}px)`;
     });
 
     document.body.addEventListener("mouseleave", () => {
         if (lemon1) lemon1.style.transform = `translate(-50%, 0px)`;
         if (lemon2) lemon2.style.transform = `translate(-50%, 0px)`;
-        if (leaf)   leaf.style.transform   = `translate(-50%, 0px)`;
+        if (leaf) leaf.style.transform = `translate(-50%, 0px)`;
     });
 
     window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".navbar");
-        const medsos = document.querySelector(".sosmed-list");
-        const logo = document.querySelector(".logo-dew");
-        const menuList = document.querySelectorAll(".menu-list, .menu-list2");
+        let navbar = document.querySelector(".navbar");
+        let medsos = document.querySelector(".sosmed-list");
+        let logo = document.querySelector(".logo-dew");
+        let menuList = document.querySelectorAll(".menu-list, .menu-list2");
 
-        const scrolled = window.scrollY > 50;
+        let scrolled = window.scrollY > 50;
 
         navbar?.classList.toggle("scrolled", scrolled);
         medsos?.classList.toggle("scrolled", scrolled);
@@ -48,18 +48,18 @@ document.addEventListener("DOMContentLoaded", () => {
         item.addEventListener('click', e => e.preventDefault());
     });
 
-    const productCols = document.querySelectorAll(
+    let productCols = document.querySelectorAll(
         ".product-grid .col-lg-3, .product-grid .col-md-4, .product-grid .col-sm-6, .product-grid .col-12"
     );
 
     productCols.forEach((col, index) => {
-        const card = col.querySelector(".card-best");
+        let card = col.querySelector(".card-best");
         if (!card) return;
 
-        const titleEl = card.querySelector(".card-title");
+        let titleEl = card.querySelector(".card-title");
         if (!titleEl) return;
 
-        const title = titleEl.textContent.toLowerCase();
+        let title = titleEl.textContent.toLowerCase();
 
         let flavor = "jamu-twist";
         if (title.includes("kopi")) {
@@ -68,9 +68,9 @@ document.addEventListener("DOMContentLoaded", () => {
             flavor = "aloe-lychee";
         }
 
-        const sweetness = index % 2 === 0 ? "low-cal" : "no-sugar";
+        let sweetness = index % 2 === 0 ? "low-cal" : "no-sugar";
 
-        const size = index < 4 ? "250" : "330";
+        let size = index < 4 ? "250" : "330";
 
         col.dataset.flavor = flavor;
         col.dataset.sweetness = sweetness;
@@ -79,21 +79,21 @@ document.addEventListener("DOMContentLoaded", () => {
         col.classList.add("product-item");
     });
 
-    const checkboxes = document.querySelectorAll(".filter-checkbox");
-    const products = document.querySelectorAll(".product-item");
+    let checkboxes = document.querySelectorAll(".filter-checkbox");
+    let products = document.querySelectorAll(".product-item");
 
     function applyFilters() {
-        const activeFilters = {};
+        let activeFilters = {};
 
         checkboxes.forEach((cb) => {
-            const group = cb.dataset.group;
-            const value = cb.value;
+            let group = cb.dataset.group;
+            let value = cb.value;
 
             if (!activeFilters[group]) activeFilters[group] = new Set();
             if (cb.checked) activeFilters[group].add(value);
         });
 
-        const noFilterActive = Object.values(activeFilters).every(set => set.size === 0);
+        let noFilterActive = Object.values(activeFilters).every(set => set.size === 0);
 
         products.forEach((product) => {
             let visible = true;
