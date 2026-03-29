@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ilmu Komputer UNRI</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        @import "tailwindcss";
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Underline animation */
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0%;
+            height: 2px;
+            background: white;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-up.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .seal {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            width: 60px;
+            height: 60px;
+            background: gold;
+            color: black;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            clip-path: polygon(50% 0%, 61% 10%, 75% 5%, 85% 15%, 95% 25%, 90% 40%,
+                    100% 50%, 90% 60%, 95% 75%, 85% 85%, 75% 95%,
+                    60% 90%, 50% 100%, 40% 90%, 25% 95%, 15% 85%,
+                    5% 75%, 10% 60%, 0% 50%, 10% 40%, 5% 25%,
+                    15% 15%, 25% 5%, 40% 10%);
+        }
+
+        .fade-left,
+        .fade-right {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-left.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-right.show {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.3s;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- WRAPPER FIXED -->
+    <div class="fixed top-0 left-0 w-full z-50">
+
+        <!-- TOP BAR -->
+        <div class="bg-gradient-to-r from-purple-700 via-pink-600 to-red-500 text-white text-sm">
+            <div class="max-w-full mx-[50px] px-4 py-2 flex justify-end items-center gap-6">
+                <a href="#" class="hover:underline">Universitas Riau</a>
+                <a href="#" class="hover:underline">SATU UNRI</a>
+                <a href="#" class="hover:underline">Perpustakaan</a>
+                <a href="#" class="hover:underline">Webmail</a>
+                <a href="#" class="hover:underline">PPID</a>
+
+                <div class="flex items-center gap-2 cursor-pointer">
+                    <!-- SVG FLAG -->
+                    <a href="#" class="hover:underline">
+                        <img src="https://emojigraph.org/media/openmoji/flag-indonesia_1f1ee-1f1e9.png"
+                            alt="Indonesia Flag" class="w-6 h-6">
+                    </a>
+                    <a href="#" class="hover:underline">
+                        <img src="https://emojigraph.org/media/openmoji/flag-united-kingdom_1f1ec-1f1e7.png"
+                            alt="United Kingdom Flag" class="w-6 h-6">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN NAVBAR -->
+        <nav class="bg-blue-600 text-white w-full rounded-b-lg shadow">
+            <div class="max-w-full mx-[50px] px-4">
+                <div class="flex items-center justify-between h-16">
+
+                    <!-- LOGO -->
+                    <div class="flex items-center gap-3">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/LOGO-UNRI.png/250px-LOGO-UNRI.png"
+                            alt="UNRI Logo" class="w-10 h-10">
+                        <span class="hidden sm:block text-sm font-semibold">Ilmu Komputer</span>
+                    </div>
+
+                    <!-- MENU -->
+                    <div class="hidden md:flex gap-10 text-sm font-medium">
+                        <a href="#" class="nav-link">Profil</a>
+                        <a href="#" class="nav-link">Akademik</a>
+                        <a href="#" class="nav-link">Dosen dan Staff</a>
+                        <a href="#" class="nav-link">Layanan</a>
+                        <a href="#" class="nav-link">Kemahasiswaan</a>
+                    </div>
+
+                    <!-- MOBILE -->
+                    <button id="menuBtn" class="md:hidden text-2xl">☰</button>
+
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+    <script>
+        const btn = document.getElementById("menuBtn");
+        const menu = document.getElementById("mobileMenu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+
+
+    <!-- HERO -->
+    <section id="hero" class="relative w-full h-screen overflow-hidden">
+
+        <!-- VIDEO -->
+        <img src="https://is3.cloudhost.id/cms-unri/fmipa.unri.ac.id/media/21502/Su9jBvyH0W5UYegxvi0uByjeCc5dLnWeEX9V6tAb.png"
+            id="bgVideo" class="absolute inset-0 w-full h-full object-cover" muted loop playsinline>
+
+
+        <!-- OVERLAY -->
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <!-- CONTENT -->
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6">
+
+            <h1 class="fade-up text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl leading-tight">
+                Selamat Datang di Website Jurusan Ilmu Komputer
+            </h1>
+
+            <button id="openModal"
+                class="fade-up mt-8 px-6 py-3 bg-blue-600 hover:bg-red-700 transition rounded-full font-semibold shadow-lg transform hover:scale-105">
+                Tonton Video Jurusan
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- MODAL -->
+    <div id="modal" class="fixed inset-0 bg-black/95 hidden items-center justify-center z-50">
+
+        <button id="closeModal" class="absolute top-5 right-5 text-white text-3xl">&times;</button>
+
+        <div class="w-full max-w-5xl aspect-video">
+            <iframe id="modalVideo" class="w-full h-full rounded-lg" allow="autoplay; fullscreen" allowfullscreen>
+            </iframe>
+        </div>
+
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+        const video = document.getElementById("bgVideo");
+        const hero = document.getElementById("hero");
+
+        // LAZY LOAD VIDEO
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    video.play().catch(() => { });
+                } else {
+                    video.pause();
+                }
+            });
+        });
+
+        observer.observe(hero);
+
+        // ANIMATION
+        window.addEventListener("load", () => {
+            document.querySelectorAll(".fade-up").forEach((el, i) => {
+                setTimeout(() => el.classList.add("show"), i * 200);
+            });
+        });
+
+        // MODAL CONTROL
+        const openBtn = document.getElementById("openModal");
+        const closeBtn = document.getElementById("closeModal");
+        const modal = document.getElementById("modal");
+        const modalVideo = document.getElementById("modalVideo");
+
+        openBtn.onclick = () => {
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+
+            // pause background
+            video.pause();
+
+            modalVideo.src = "https://www.youtube.com/embed/382XnPOHYKw?autoplay=1";
+        };
+
+        closeBtn.onclick = () => {
+            modal.classList.add("hidden");
+            modal.classList.remove("flex");
+
+            modalVideo.src = "";
+
+            // resume background
+            video.play().catch(() => { });
+        };
+    </script>
+
+    <!-- PROGRAM PENDIDIKAN -->
+    <section id="program" class="relative py-24 bg-cover bg-bottom"
+        style="background-image: url('https://yuelearningcode.github.io/papsi_project/image/bg-platform-1.webp');">
+
+        <!-- OVERLAY -->
+        <div class="absolute inset-0 bg-white/90"></div>
+
+        <div class="relative max-w-7xl mx-auto px-6">
+
+            <!-- TITLE -->
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                Program Pendidikan
+            </h2>
+
+            <!-- GRID BOX -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                <!-- BOX -->
+                <div class="group relative rounded-xl p-[1px] bg-gradient-to-br from-blue-500 to-red-400">
+
+                    <div class="relative bg-white rounded-xl h-72 flex flex-col items-center justify-center text-center p-6
+                    transition duration-500 transform group-hover:scale-105 group-hover:-rotate-1
+                    group-hover:shadow-2xl">
+
+                        <!-- BADGE -->
+                        <div class="seal">B</div>
+
+                        <!-- ICON -->
+                        <div class="mb-4 text-blue-600">
+                            <i data-lucide="book-open" class="w-10 h-10 group-hover:text-red-700 transition"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2">Program Diploma</h3>
+                        <p class="text-gray-600 text-lg">D3 Manajemen Informatika</p>
+
+                    </div>
+                </div>
+
+                <!-- BOX -->
+                <div class="group relative rounded-xl p-[1px] bg-gradient-to-br from-blue-500 to-red-400">
+
+                    <div class="relative bg-white rounded-xl h-72 flex flex-col items-center justify-center text-center p-6
+                    transition duration-500 transform group-hover:scale-105 group-hover:rotate-1
+                    group-hover:shadow-2xl">
+
+                        <!-- BADGE -->
+                        <div class="seal">B</div>
+
+                        <!-- ICON -->
+                        <div class="mb-4 text-blue-600">
+                            <i data-lucide="book-open" class="w-10 h-10 group-hover:text-red-700 transition"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2">Program Sarjana</h3>
+                        <p class="text-gray-600 text-lg">S1 Sistem Informasi</p>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- STATISTICS -->
+            <div id="stats" class="grid grid-cols-2 md:grid-cols-4 gap-10 mt-20 text-center">
+
+                <div>
+                    <i data-lucide="users" class="w-12 h-12 mx-auto text-red-600 mb-2"></i>
+                    <h4 class="counter text-4xl font-bold">0</h4>
+                    <div class="line w-0 h-[2px] bg-blue-600 mx-auto my-3 transition-all duration-700"></div>
+                    <p class="text-gray-600">Total Dosen</p>
+                </div>
+
+                <div>
+                    <i data-lucide="graduation-cap" class="w-12 h-12 mx-auto text-red-600 mb-2"></i>
+                    <h4 class="counter text-4xl font-bold">0</h4>
+                    <div class="line w-0 h-[2px] bg-blue-600 mx-auto my-3 transition-all duration-700"></div>
+                    <p class="text-gray-600">Total Mahasiswa</p>
+                </div>
+
+                <div>
+                    <i data-lucide="laptop" class="w-12 h-12 mx-auto text-red-600 mb-2"></i>
+                    <h4 class="counter text-4xl font-bold">0</h4>
+                    <div class="line w-0 h-[2px] bg-blue-600 mx-auto my-3 transition-all duration-700"></div>
+                    <p class="text-gray-600">Mahasiswa Aktif</p>
+                </div>
+
+                <div>
+                    <i data-lucide="award" class="w-12 h-12 mx-auto text-red-600 mb-2"></i>
+                    <h4 class="counter text-4xl font-bold">0</h4>
+                    <div class="line w-0 h-[2px] bg-blue-600 mx-auto my-3 transition-all duration-700"></div>
+                    <p class="text-gray-600">Alumni</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SCRIPT -->
+    <script>
+        const counters = document.querySelectorAll(".counter");
+        const lines = document.querySelectorAll(".line");
+        const statsSection = document.getElementById("stats");
+
+        const targets = [45, 3950, 950, 3000];
+        let started = false;
+
+        const observers = new IntersectionObserver(entries => {
+            if (entries[0].isIntersecting && !started) {
+                started = true;
+
+                counters.forEach((counter, i) => {
+                    const target = targets[i];
+                    let count = 0;
+                    const speed = target / 100;
+
+                    const update = () => {
+                        count += speed;
+
+                        if (count < target) {
+                            counter.innerText = Math.floor(count).toLocaleString();
+                            requestAnimationFrame(update);
+                        } else {
+                            counter.innerText = target.toLocaleString();
+                        }
+                    };
+
+                    update();
+                });
+
+                // animate lines
+                lines.forEach(line => {
+                    line.style.width = "50px";
+                });
+            }
+        }, { threshold: 0.3 });
+
+        observers.observe(statsSection);
+    </script>
+
+    <!-- KATA SAMBUTAN -->
+    <section id="sambutan" class="py-24 bg-gray-50 overflow-hidden">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+
+                <!-- LEFT -->
+                <div class="relative flex justify-center fade-left">
+
+                    <!-- SVG BLOB -->
+                    <svg id="blob" class="absolute w-80 md:w-96 opacity-70" viewBox="0 0 200 200">
+                        <path fill="#BFDBFE"
+                            d="M40.5,-65.3C52.2,-55.2,60.6,-43.5,66.9,-30.5C73.1,-17.6,77.2,-3.4,74.6,9.6C72,22.6,62.7,34.4,51.2,45.5C39.7,56.7,26,67.2,10.4,72.4C-5.2,77.5,-20.8,77.3,-34.4,70.8C-48,64.3,-59.6,51.5,-66.4,37.1C-73.2,22.8,-75.2,6.9,-71.8,-7.3C-68.4,-21.4,-59.6,-33.9,-48.3,-44.3C-37,-54.7,-22.9,-63,-7.5,-65.6C7.9,-68.2,15.8,-65.4,40.5,-65.3Z"
+                            transform="translate(100 100)" />
+                    </svg>
+
+                    <!-- FOTO -->
+                    <img src="https://yuelearningcode.github.io/papsi_project/image/bu%20thisa.png"
+                        class="relative z-10 w-64 md:w-80 object-contain">
+
+                </div>
+
+                <!-- RIGHT -->
+                <div class="relative fade-right">
+
+                    <!-- QUOTE -->
+                    <div class="absolute -top-8 left-0 text-8xl text-gray-200 select-none">
+                        ”
+                    </div>
+
+                    <!-- TEXT -->
+                    <p class="relative text-gray-700 leading-relaxed text-lg max-w-xl">
+                        Jurusan Ilmu Komputer berkomitmen untuk mencetak lulusan yang tidak hanya unggul secara
+                        akademik,
+                        tetapi juga adaptif terhadap perkembangan teknologi global. Kami mengedepankan inovasi,
+                        kolaborasi,
+                        dan integritas sebagai landasan dalam membentuk generasi yang mampu memberikan kontribusi nyata
+                        di era digital.
+                    </p>
+
+                    <!-- SIGNATURE -->
+                    <div class="mt-8">
+                        <h4 class="text-xl font-semibold text-gray-900">
+                            Tisha Melia, B.Sc, M.Sc, Ph.D
+                        </h4>
+                        <p class="text-gray-500">
+                            Ketua Jurusan Ilmu Komputer
+                        </p>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="mt-8 flex flex-wrap gap-4">
+
+                        <a href="#"
+                            class="px-6 py-3 bg-red-600 text-white rounded-full hover:bg-red-700 transition shadow-md">
+                            Lihat Profil Ketua
+                        </a>
+
+                        <a href="#" class="px-6 py-3 border border-gray-400 rounded-full hover:bg-gray-100 transition">
+                            Pelajari Lebih Lanjut
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SCRIPT -->
+    <script>
+        const left = document.querySelector(".fade-left");
+        const right = document.querySelector(".fade-right");
+        const blob = document.getElementById("blob");
+
+        // Intersection Animation
+        const observerss = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    left.classList.add("show");
+                    right.classList.add("show");
+                }
+            });
+        }, { threshold: 0.3 });
+
+        observerss.observe(document.getElementById("sambutan"));
+
+        // Parallax Blob
+        window.addEventListener("scroll", () => {
+            const scrollY = window.scrollY;
+            blob.style.transform = `translateY(${scrollY * 0.05}px)`;
+        });
+    </script>
+
+    <!-- BERITA SECTION -->
+    <section id="berita" class="py-24 bg-white">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- TITLE -->
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                Berita Terbaru
+            </h2>
+
+            <!-- GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+                <!-- CARD 1 -->
+                <div class="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl 
+                  transform hover:-translate-y-2 transition duration-300">
+
+                    <!-- IMAGE -->
+                    <div class="relative overflow-hidden">
+                        <img src="https://yuelearningcode.github.io/papsi_project/image/berita1.jpg"
+                            class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+
+                        <!-- BADGE -->
+                        <span class="absolute top-3 right-3 bg-blue-600 text-white text-xs px-3 py-1 rounded-full">
+                            Berita
+                        </span>
+                    </div>
+
+                    <!-- CONTENT -->
+                    <div class="p-5">
+                        <h3 class="font-semibold text-lg line-clamp-3">
+                            Mahasiswa Ilmu Komputer Raih Prestasi di Kompetisi Nasional Teknologi Informasi
+                        </h3>
+
+                        <p class="text-gray-500 text-sm mt-2">
+                            12 Maret 2026
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl 
+                  transform hover:-translate-y-2 transition duration-300">
+
+                    <div class="relative overflow-hidden">
+                        <img src="https://yuelearningcode.github.io/papsi_project/image/berita2.jpg"
+                            class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+
+                        <span class="absolute top-3 right-3 bg-orange-500 text-white text-xs px-3 py-1 rounded-full">
+                            Pemberitahuan
+                        </span>
+                    </div>
+
+                    <div class="p-5">
+                        <h3 class="font-semibold text-lg line-clamp-3">
+                            Jadwal Perkuliahan Semester Genap Telah Diperbarui untuk Tahun Akademik 2026
+                        </h3>
+
+                        <p class="text-gray-500 text-sm mt-2">
+                            10 Maret 2026
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl 
+                  transform hover:-translate-y-2 transition duration-300">
+
+                    <div class="relative overflow-hidden">
+                        <img src="https://yuelearningcode.github.io/papsi_project/image/berita3.jpg"
+                            class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+
+                        <span class="absolute top-3 right-3 bg-yellow-500 text-white text-xs px-3 py-1 rounded-full">
+                            Penghargaan
+                        </span>
+                    </div>
+
+                    <div class="p-5">
+                        <h3 class="font-semibold text-lg line-clamp-3">
+                            Jurusan Ilmu Komputer Mendapatkan Penghargaan sebagai Program Studi Terbaik Nasional
+                        </h3>
+
+                        <p class="text-gray-500 text-sm mt-2">
+                            5 Maret 2026
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- BUTTON -->
+            <div class="text-center mt-16">
+                <a href="#" class="inline-block px-8 py-3 bg-red-600 text-white font-semibold rounded-full 
+                hover:bg-red-700 transition shadow-md hover:shadow-lg">
+                    Lihat Berita Lainnya
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+        tailwind.config = {
+            plugins: [tailwindcssLineClamp]
+        }
+    </script>
+
+    <!-- FOOTER -->
+    <footer class="bg-gradient-to-br from-purple-700 via-pink-600 to-blue-500 text-white pt-20 pb-10">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+                <!-- KOLOM 1 -->
+                <div>
+
+                    <!-- LOGO -->
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10  rounded-full"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/LOGO-UNRI.png/250px-LOGO-UNRI.png"
+                                alt="Logo UNRI"></div>
+                        <h3 class="font-semibold leading-tight">
+                            FMIPA Ilmu Komputer Universitas Riau
+                        </h3>
+                    </div>
+
+                    <!-- ALAMAT -->
+                    <p class="text-sm text-white/80">
+                        Kampus Bina Widya KM 12.5, Simpang Baru, Pekanbaru – Riau 28293
+                    </p>
+
+                    <!-- SOSMED -->
+                    <div class="flex gap-4 mb-6 text-lg">
+
+                        <a href="#" class="hover:scale-110 transition transform hover:text-gray-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#" class="hover:scale-110 transition transform hover:text-gray-300">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+
+                        <a href="#" class="hover:scale-110 transition transform hover:text-gray-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+                <!-- KOLOM 2 -->
+                <div>
+                    <h4 class="font-semibold mb-4">Direktori Web</h4>
+                    <ul class="space-y-2 text-sm text-white/80">
+                        <li><a href="#" class="hover:text-white">UNRI</a></li>
+                        <li><a href="#" class="hover:text-white">Perpustakaan</a></li>
+                        <li><a href="#" class="hover:text-white">LPPM</a></li>
+                        <li><a href="#" class="hover:text-white">LPPMP</a></li>
+                    </ul>
+                </div>
+
+                <!-- KOLOM 3 -->
+                <div>
+                    <h4 class="font-semibold mb-4">Layanan Online</h4>
+                    <ul class="space-y-2 text-sm text-white/80">
+                        <li><a href="#" class="hover:text-white">Satu Unri</a></li>
+                        <li><a href="#" class="hover:text-white">E-Jurnal</a></li>
+                        <li><a href="#" class="hover:text-white">Selasi</a></li>
+                        <li><a href="#" class="hover:text-white">E-PPM</a></li>
+                        <li><a href="#" class="hover:text-white">Insentif PPM</a></li>
+                        <li><a href="#" class="hover:text-white">Email</a></li>
+                    </ul>
+                </div>
+
+                <!-- KOLOM 4 -->
+                <div>
+                    <h4 class="font-semibold mb-4">Say hello</h4>
+
+                    <p class="text-sm text-white/80 mb-2">Need support?</p>
+                    <a href="#" class="text-sm hover:text-gray-300">
+                        helpdesk.unri.ac.id
+                    </a>
+
+                    <p class="text-sm text-white/80 mt-4">Customer care</p>
+                    <p class="text-sm">(0761) 63266</p>
+
+                </div>
+
+            </div>
+
+            <!-- MAP -->
+            <div class="mt-16">
+                <iframe src="https://maps.google.com/maps?q=Universitas%20Riau&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    class="w-full h-64 rounded-xl border-0" loading="lazy">
+                </iframe>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="mt-12 border-t border-white/20 pt-6 text-center text-xs text-white/60 px-6">
+            This site is protected by reCAPTCHA and the Google privacy policy and terms of service apply. You must not
+            use this website if you disagree with any of these website standard terms and conditions.
+        </div>
+
+    </footer>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
